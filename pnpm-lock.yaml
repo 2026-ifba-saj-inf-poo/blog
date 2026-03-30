@@ -11,6 +11,15 @@ importers:
       '@vuepress/plugin-pwa':
         specifier: ^1.9.10
         version: 1.9.10
+      markdown-it-container:
+        specifier: ^4.0.0
+        version: 4.0.0
+      markdown-it-plantuml:
+        specifier: ^1.4.1
+        version: 1.4.1
+      markdown-it-table-captions:
+        specifier: ^1.0.4
+        version: 1.0.4
     devDependencies:
       '@vuepress/bundler-vite':
         specifier: 2.0.0-rc.27
@@ -2155,8 +2164,17 @@ packages:
       '@types/markdown-it':
         optional: true
 
+  markdown-it-container@4.0.0:
+    resolution: {integrity: sha512-HaNccxUH0l7BNGYbFbjmGpf5aLHAMTinqRZQAEQbMr2cdD3z91Q6kIo1oUn1CQndkT03jat6ckrdRYuwwqLlQw==}
+
   markdown-it-emoji@3.0.0:
     resolution: {integrity: sha512-+rUD93bXHubA4arpEZO3q80so0qgoFJEKRkRbjKX8RTdca89v2kfyF+xR3i2sQTwql9tpPZPOQN5B+PunspXRg==}
+
+  markdown-it-plantuml@1.4.1:
+    resolution: {integrity: sha512-13KgnZaGYTHBp4iUmGofzZSBz+Zj6cyqfR0SXUIc9wgWTto5Xhn7NjaXYxY0z7uBeTUMlc9LMQq5uP4OM5xCHg==}
+
+  markdown-it-table-captions@1.0.4:
+    resolution: {integrity: sha512-EpUN5GJLdDbpWSSl0Qf51kwT1e4mUMDB60mitr8JH4Sciyzny7x80BcSG9vKk6MOmeYjmGJ4aBTQCnCf7Y1iZw==}
 
   markdown-it@14.1.1:
     resolution: {integrity: sha512-BuU2qnTti9YKgK5N+IeMubp14ZUKUUw7yeJbkjtosvHiP0AZ5c8IAgEMk79D0eC8F23r4Ac/q8cAIFdm2FtyoA==}
@@ -5466,7 +5484,13 @@ snapshots:
     optionalDependencies:
       '@types/markdown-it': 14.1.2
 
+  markdown-it-container@4.0.0: {}
+
   markdown-it-emoji@3.0.0: {}
+
+  markdown-it-plantuml@1.4.1: {}
+
+  markdown-it-table-captions@1.0.4: {}
 
   markdown-it@14.1.1:
     dependencies:

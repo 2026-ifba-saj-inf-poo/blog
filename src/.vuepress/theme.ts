@@ -30,7 +30,7 @@ export default hopeTheme({
   blog: {
     description: "Professor EBTT",
     //intro: "/intro.html",
-    avatar: "/assets/icon/icon-512.png",
+    avatar: "/assets/images/ifbasaj.jpg",
     medias: {
       Email: "mailto:leandro.costa@ifba.edu.br",
       GitHub: "https://github.com/leandro-costa",
