@@ -49,4 +49,4 @@ jobs:
         with:
           # Deploy Docs
           branch: gh-pages
-          folder: src\.vuepress\dist
+          folder: src/.vuepress/dist
