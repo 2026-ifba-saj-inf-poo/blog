@@ -5,7 +5,7 @@ import table_captions from 'markdown-it-table-captions'
 import theme from "./theme.js";
 
 export default defineUserConfig({
-  base: "/",
+  base: "/blog/",
 
   lang: "pt-BR",
   title: "20261 POO",

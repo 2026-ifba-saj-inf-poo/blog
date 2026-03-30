@@ -4,7 +4,7 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://2026-ifba-saj-inf-poo.github.io/blog",
+  //hostname: "https://2026-ifba-saj-inf-poo.github.io/blog",
 
   author: {
     name: "Leandro Souza",
