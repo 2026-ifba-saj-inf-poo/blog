@@ -3,8 +3,8 @@ home: true
 layout: Blog
 icon: house
 title: Aulas
-bgImage: ./assets/images/bg.jpg
-heroImage: ./assets/icon/icon.png 
+bgImage: ./assets/images/background.png
+heroImage: ./assets/images/icon.png 
 heroText: Blog de Aulas de POO
 projects:
   - icon: link

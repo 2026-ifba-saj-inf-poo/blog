@@ -40,6 +40,6 @@ export default navbar([
   {
     text: "Imprimir",
     icon: "print",
-    link: "imprimir",
+    link: "/posts/print.md"
   }
 ]);

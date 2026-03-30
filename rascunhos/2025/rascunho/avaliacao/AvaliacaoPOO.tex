@@ -1,0 +1,1220 @@
+\documentclass{exam}
+\usepackage{ModeloIFBA}
+%\usepackage[alf]{abntex2cite}
+\usepackage{multicol}
+\usepackage{adjustbox}
+\usepackage{multicol}
+
+\setlength\columnsep{30pt}
+
+
+\renewcommand{\curso}{Tecnologia em Análise e Desenvolvimento de Sistemas }
+\renewcommand{\materia}{Programação Orientada a Objetos}
+\renewcommand{\turma}{2025.1}
+\renewcommand{\professor}{Leandro Costa Souza}
+\renewcommand{\avaliacao}{Prova Unidade II}
+\renewcommand{\dataavaliacao}{01/09/2025}
+
+
+\newcommand{\duracao}{1h 40min}
+\newcounter{solcount}
+\setcounter{solcount}{1}
+\newcommand\CC{\
+    \CorrectChoice\label{sol:\arabic{solcount}}
+    \stepcounter{solcount}
+}
+
+\newcommand\printmyanswers{
+\newpage
+\section*{\centering Answers Sheet}
+    \foreach \x in {1,...,\thequestion}{
+    \noindent
+        \x.\ref{sol:\x}\\par
+    }
+}
+
+\printanswers
+
+\begin{document}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabularx}{\textwidth}{rrXrl}
+\multirow{5}{*}{\ifbalogo{1.7in}} & \textbf{Curso:} & \multicolumn{3}{l}{ \curso } \\
+& \textbf{Matéria:} & \materia \space & \textbf{Turma:} & \small{\turma}  \\
+& \textbf{Professor:} & \professor & & \\
+& \textbf{Aluno:} & \hrulefill & \textbf{Data:} & \dataavaliacao \\
+\end{tabularx}
+\end{adjustbox}
+\begin{tabularx}{\textwidth}{XcX}
+ & \textbf{\avaliacao} &  \\ \hline
+\end{tabularx}	
+	\input{orientacoes}
+
+	\begin{questions}
+\begin{multicols}{2}
+
+% --- QUESTÕES EXISTENTES (1-100) ---
+
+\question[1] Qual dos seguintes paradigmas de programação é o principal foco do Java?
+\begin{choices}
+ \choice Funcional
+ \choice Lógico
+ \choice Orientado a Eventos
+ \CC Orientado a Objetos
+ \choice Declarativo
+\end{choices}
+
+\question[1] O que a sigla JDK significa no contexto do desenvolvimento Java?
+\begin{choices}
+ \choice Java Runtime Kit - Kit de Execução Java
+ \CC Java Development Kit - Kit de Desenvolvimento Java
+ \choice Java Deployment Kit - Kit de Implantação Java
+ \choice Java Dynamic Kit - Kit Dinâmico Java
+ \choice Java Developer Kernel - Núcleo de Desenvolvimento Java
+\end{choices}
+
+\question[1] Qual é a função da JVM (Java Virtual Machine)?
+\begin{choices}
+ \choice Compilar o código-fonte Java (.java) em bytecode (.class).
+ \CC Fornecer um ambiente para executar o bytecode Java em qualquer plataforma.
+ \choice Depurar o código Java durante o desenvolvimento.
+ \choice Gerenciar as dependências do projeto.
+ \choice Escrever código Java automaticamente.
+\end{choices}
+
+\question[1] Qual dos seguintes tipos de dados em Java é usado para armazenar números inteiros?
+\begin{choices}
+ \choice double
+ \choice float
+ \CC int
+ \choice char
+ \choice boolean
+\end{choices}
+
+\question[1] Qual estrutura de repetição é mais adequada quando não se sabe o número exato de iterações, mas se conhece a condição de parada?
+\begin{choices}
+ \choice for
+ \choice foreach
+ \CC while
+ \choice if-else
+ \choice switch
+\end{choices}
+
+\question[1] Como se declara corretamente um array de 5 números inteiros em Java?
+\begin{choices}
+ \choice int[] numeros = new int(5);
+ \choice int numeros[] = new int{5};
+ \CC int[] numeros = new int[5];
+ \choice int numeros = new int[5];
+ \choice array<int> numeros = new array<int>(5);
+\end{choices}
+
+\question[1] Qual classe é comumente usada para ler entradas do teclado no console em Java?
+\begin{choices}
+ \choice System.in
+ \choice ConsoleReader
+ \choice Input
+ \CC Scanner
+ \choice Keyboard
+\end{choices}
+
+\question[1] O que o comando `break` faz dentro de um laço de repetição?
+\begin{choices}
+ \choice Pula para a próxima iteração do laço.
+ \CC Interrompe a execução do laço imediatamente.
+ \choice Retorna um valor do método.
+ \choice Causa um erro de compilação.
+ \choice Finaliza a execução do programa.
+\end{choices}
+
+\question[1] Qual é a convenção de nomenclatura para variáveis e métodos em Java?
+\begin{choices}
+ \choice PascalCase (Ex: MinhaVariavel)
+ \choice snake\_case (Ex: minha\_variavel)
+ \choice kebab-case (Ex: minha-variavel)
+ \CC camelCase (Ex: minhaVariavel)
+ \choice UPPERCASE (Ex: MINHAVARIAVEL)
+\end{choices}
+
+\question[1] Para que serve a classe `JOptionPane'?
+\begin{choices}
+ \choice Para realizar cálculos matemáticos complexos.
+ \choice Para criar interfaces gráficas de usuário (GUI) em modo texto.
+ \CC Para exibir caixas de diálogo gráficas para entrada e saída de dados.
+ \choice Para manipular arquivos no sistema.
+ \choice Para conectar a um banco de dados.
+\end{choices}
+
+\question[1] O que é o escopo de uma variável?
+\begin{choices}
+ \choice O valor máximo que a variável pode armazenar.
+ \choice O tipo de dado da variável.
+ \CC A região do código onde a variável é acessível.
+ \choice O nome único da variável.
+ \choice O tempo de vida da variável na memória.
+\end{choices}
+
+\question[1] Qual método converte uma `String` para um número inteiro em Java?
+\begin{choices}
+ \choice Integer.toInt()
+ \choice String.parseInteger()
+ \CC Integer.parseInt()
+ \choice Convert.toInt()
+ \choice (int) myString
+\end{choices}
+
+\question[1] O que é uma classe em POO?
+\begin{choices}
+ \choice Um objeto em execução.
+ \CC Um modelo para criar objetos.
+ \choice Uma função que retorna um valor.
+ \choice Uma variável que armazena dados.
+ \choice Um evento do sistema.
+\end{choices}
+
+\question[1] O que são atributos em uma classe?
+\begin{choices}
+ \choice As ações que um objeto pode realizar.
+ \CC As características ou dados que um objeto possui.
+ \choice Os eventos que um objeto pode disparar.
+ \choice Os construtores da classe.
+ \choice As classes das quais ela herda.
+\end{choices}
+
+\question[1] Qual é o objetivo de um construtor em uma classe Java?
+\begin{choices}
+ \choice Destruir um objeto quando ele não é mais necessário.
+ \CC Inicializar um objeto quando ele é criado.
+ \choice Definir os métodos que o objeto pode executar.
+ \choice Retornar o valor de um atributo privado.
+ \choice Comparar dois objetos.
+\end{choices}
+
+\question[1] O que é encapsulamento?
+\begin{choices}
+ \choice A capacidade de uma classe herdar características de outra.
+ \CC A prática de agrupar dados e métodos em uma unidade, escondendo os detalhes internos.
+ \choice A capacidade de um objeto ter múltiplas formas.
+ \choice A criação de múltiplos objetos a partir da mesma classe.
+ \choice A organização de classes em pacotes.
+\end{choices}
+
+\question[1] Qual modificador de acesso torna um atributo ou método acessível apenas instâncias da própria classe?
+\begin{choices}
+ \choice public
+ \choice protected
+ \choice default
+ \CC private
+ \choice static
+\end{choices}
+
+\question[1] Para que servem os métodos `get` e `set` (getters e setters)?
+\begin{choices}
+ \choice Para criar e destruir objetos, respectivamente.
+ \CC Para fornecer acesso controlado aos atributos privados de uma classe.
+ \choice Para comparar e definir a ordem dos objetos.
+ \choice Para iniciar e parar a execução de threads.
+ \choice Para converter objetos em Strings.
+\end{choices}
+
+\question[1] O que é herança em POO?
+\begin{choices}
+ \choice A criação de uma cópia exata de um objeto.
+ \CC Um mecanismo que permite a uma classe adquirir os atributos e métodos de outra.
+ \choice A capacidade de um método ter o mesmo nome mas diferentes parâmetros.
+ \choice A prática de esconder a complexidade interna de um objeto.
+ \choice A relação onde um objeto contém outro.
+\end{choices}
+
+\question[1] Qual palavra-chave é usada em Java para indicar que uma classe herda de outra?
+\begin{choices}
+ \choice implements
+ \choice inherits
+ \CC extends
+ \choice super
+ \choice derives
+\end{choices}
+
+\question[1] O que a anotação `@Override` indica?
+\begin{choices}
+ \choice Que o método está sobrecarregado.
+ \CC Que o método está sendo sobrescrito de uma superclasse.
+ \choice Que o método é a versão final e não pode ser modificado.
+ \choice Que o método é obsoleto e não deve ser usado.
+ \choice Que o método é estático.
+\end{choices}
+
+\question[1] Qual é a saída do código a seguir?
+\begin{verbatim}
+class Veiculo {
+    public void mover() {
+        System.out.println("Veículo se move");
+    }
+}
+class Carro extends Veiculo {
+    @Override
+    public void mover() {
+        System.out.println("Carro acelera");
+    }
+}
+public class Teste {
+    public static void main(String[] args) {
+        Veiculo meuVeiculo = new Carro();
+        meuVeiculo.mover();
+    }
+}
+\end{verbatim}
+\begin{choices}
+ \choice `Veículo se move'
+ \CC `Carro acelera'
+ \choice Erro de compilação
+ \choice `Veículo se move'`Carro acelera'
+ \choice Nenhuma saída
+\end{choices}
+
+\question[1] O conceito de uma variável `Veiculo` referenciar um objeto `Carro` e chamar o método específico de `Carro` é um exemplo de:
+\begin{choices}
+ \choice Encapsulamento
+ \choice Herança
+ \CC Polimorfismo
+ \choice Abstração
+ \choice Composição
+\end{choices}
+
+\question[1] Qual a diferença entre sobrecarga (overloading) e sobrescrita (overriding)?
+\begin{choices}
+ \choice Sobrecarga é em classes diferentes, sobrescrita é na mesma classe.
+ \choice Sobrecarga usa a mesma assinatura, sobrescrita usa assinaturas diferentes.
+ \CC Sobrecarga é ter métodos com mesmo nome e parâmetros diferentes na mesma classe; sobrescrita é redefinir um método da superclasse na subclasse.
+ \choice Sobrecarga é para construtores, sobrescrita é para métodos comuns.
+ \choice Não há diferença, são termos sinônimos.
+\end{choices}
+
+\question[1] O que a palavra-chave `super` faz dentro de um método de uma subclasse?
+\begin{choices}
+ \choice Chama um método da própria classe (subclasse).
+ \choice Refere-se à instância atual do objeto.
+ \CC Chama um método ou construtor da superclasse.
+ \choice Cria uma nova instância da superclasse.
+ \choice Finaliza a execução do método.
+\end{choices}
+
+\question[1] Em UML, qual tipo de seta representa a relação de Herança?
+\begin{choices}
+ \choice Seta pontilhada com ponta aberta.
+ \choice Linha contínua com um losango vazio na ponta.
+ \choice Linha contínua com um losango preenchido na ponta.
+ \CC Linha contínua com uma seta triangular fechada e vazia.
+ \choice Linha contínua com uma seta simples na ponta.
+\end{choices}
+
+\question[1] Qual a diferença fundamental entre Agregação e Composição?
+\begin{choices}
+ \choice Na Composição, as partes podem existir sem o todo; na Agregação, não.
+ \CC Na Agregação, as partes podem existir sem o todo; na Composição, as partes dependem do ciclo de vida do todo.
+ \choice Agregação é uma relação "é um", enquanto Composição é "tem um".
+ \choice Não há diferença, são a mesma coisa.
+ \choice Composição usa a palavra-chave `composes`, enquanto Agregação usa `aggregates`.
+\end{choices}
+
+\question[1] Qual coleção é mais indicada para armazenar uma lista dinâmica de objetos?
+\begin{choices}
+ \choice Array
+ \CC ArrayList
+ \choice Enum
+ \choice String[]
+ \choice int[]
+\end{choices}
+
+\question[1] O que o método `toString()` da classe `Object` faz por padrão?
+\begin{choices}
+ \choice Retorna uma representação em String vazia do objeto.
+ \CC Retorna o nome da classe seguido por "@" e o código hash do objeto.
+ \choice Retorna `null`.
+ \choice Lança uma exceção.
+ \choice Retorna uma lista de todos os atributos e seus valores.
+\end{choices}
+
+\question[1] Se uma classe é declarada como `final`, o que isso significa?
+\begin{choices}
+ \choice Que ela não pode ser instanciada.
+ \choice Que todos os seus métodos são estáticos.
+ \CC Que ela não pode ser herdada por outra classe.
+ \choice Que ela só pode ter um único objeto.
+ \choice Que seus atributos não podem ser modificados.
+\end{choices}
+
+\question[1] Qual é o resultado de comparar duas referências de objetos com `==`?
+\begin{choices}
+ \choice Verifica se os objetos são do mesmo tipo.
+ \choice Verifica se os valores dos atributos dos objetos são iguais.
+ \CC Verifica se as duas referências apontam para o mesmo objeto na memória.
+ \choice Chama o método `.equals()` automaticamente.
+ \choice Sempre retorna `false`.
+\end{choices}
+
+\question[1] Para comparar o conteúdo de dois objetos do tipo `String`, qual método deve ser usado?
+\begin{choices}
+ \choice `==`
+ \choice `compare()`
+ \choice `isEqual()`
+ \CC `equals()`
+ \choice `match()`
+\end{choices}
+
+\question[1] No Greenfoot, qual classe representa o cenário do jogo?
+\begin{choices}
+ \choice `Actor`
+ \choice `Stage`
+ \choice `Scene`
+ \CC `World`
+ \choice `Canvas`
+\end{choices}
+
+\question[1] Para criar um objeto que pode ser adicionado ao mundo, sua classe deve herdar de:
+\begin{choices}
+ \choice `World`
+ \choice `Object`
+ \CC `Actor`
+ \choice `Sprite`
+ \choice `Entity`
+\end{choices}
+
+\question[1] Qual método é chamado repetidamente em cada ator, constituindo o loop principal do jogo?
+\begin{choices}
+ \choice `run()`
+ \choice `update()`
+ \choice `loop()`
+ \CC `act()`
+ \choice `execute()`
+\end{choices}
+
+\question[1] Qual método do Greenfoot é usado para verificar se uma tecla específica está sendo pressionada?
+\begin{choices}
+ \choice `Greenfoot.isKeyPressed()`
+ \CC `Greenfoot.isKeyDown()`
+ \choice `Greenfoot.getKey()`
+ \choice `Greenfoot.checkKey()`
+ \choice `Greenfoot.isPressed()`
+\end{choices}
+
+\question[1] Qual método é usado para detectar se um ator está tocando em outro de uma classe específica?
+\begin{choices}
+ \choice `isColliding(Classe.class)`
+ \choice `intersects(Classe.class)`
+ \choice `hasContact(Classe.class)`
+ \choice `onCollision(Classe.class)`
+ \CC `isTouching(Classe.class)`
+\end{choices}
+
+\question[1] Como você removeria do mundo um objeto da classe `Moeda` que o ator atual está tocando?
+\begin{choices}
+ \choice `delete(Moeda.class);`
+ \CC `removeTouching(Moeda.class);`
+ \choice `getWorld().removeObject(getTouching(Moeda.class));`
+ \choice `destroy(Moeda.class);`
+ \choice `getWorld().removeTouching(Moeda.class);`
+\end{choices}
+
+\question[1] Para adicionar um novo ator (ex: `new Bala()`) no mundo na posição (100, 150) a partir de um ator, qual comando é usado?
+\begin{choices}
+ \choice `addObject(new Bala(), 100, 150);`
+ \CC `getWorld().addObject(new Bala(), 100, 150);`
+ \choice `Greenfoot.addObject(new Bala(), 100, 150);`
+ \choice `new Bala(100, 150);`
+ \choice `World.add(new Bala(), 100, 150);`
+\end{choices}
+
+\question[1] Qual método do Greenfoot gera um número inteiro aleatório até um limite (exclusive)?
+\begin{choices}
+ \choice `Greenfoot.random(limit);`
+ \choice `Greenfoot.getRandom(limit);`
+ \CC `Greenfoot.getRandomNumber(limit);`
+ \choice `Greenfoot.nextInt(limit);`
+ \choice `Greenfoot.randomInteger(limit);`
+\end{choices}
+
+\question[1] Se você tem várias classes de inimigos que compartilham comportamentos, qual seria a melhor abordagem de POO?
+\begin{choices}
+ \choice Copiar e colar o código comum em todas as classes.
+ \CC Criar uma superclasse `Inimigo` com o comportamento comum e fazer as classes de inimigos herdarem dela.
+ \choice Criar um método estático em uma classe `Util` para o comportamento comum.
+ \choice Colocar todo o código na classe `World`.
+ \choice Usar uma interface para cada tipo de comportamento.
+\end{choices}
+
+\question[1] Para tocar um arquivo de som chamado "explosao.wav", qual comando você usaria?
+\begin{choices}
+ \choice `Greenfoot.play("explosao.wav");`
+ \CC `Greenfoot.playSound("explosao.wav");`
+ \choice `Greenfoot.sound("explosao.wav");`
+ \choice `Greenfoot.startSound("explosao.wav");`
+ \choice `Greenfoot.music("explosao.wav");`
+\end{choices}
+
+\question[1] O que o método `getOneIntersectingObject(Classe.class)` retorna se não há intersecção?
+\begin{choices}
+ \choice `false`
+ \choice `0`
+ \CC `null`
+ \choice Lança uma exceção `NullPointerException`.
+ \choice `-1`
+\end{choices}
+
+\question[1] Como você pode obter a largura do mundo atual dentro de um ator?
+\begin{choices}
+ \choice `getWorld().width()`
+ \choice `World.getWidth()`
+ \CC `getWorld().getWidth()`
+ \choice `Greenfoot.getWorldWidth()`
+ \choice `this.World.width`
+\end{choices}
+
+\question[1] No tutorial do jogo "Hole.io", por que foi criada a classe `Swallowable`?
+\begin{choices}
+ \choice Para representar o jogador.
+ \CC Para ser uma superclasse para todos os objetos que podem ser "engolidos", aplicando herança e polimorfismo.
+ \choice Para controlar o placar do jogo.
+ \choice Para definir os limites do mundo.
+ \choice Para tocar os sons do jogo.
+\end{choices}
+
+\question[1] Para fazer um ator se mover em direção ao mouse, qual informação você precisaria obter primeiro?
+\begin{choices}
+ \choice A posição do centro do mundo.
+ \choice O número de atores no cenário.
+ \CC As informações do mouse, usando `Greenfoot.getMouseInfo()`.
+ \choice A última tecla pressionada pelo usuário.
+ \choice A velocidade de execução do cenário.
+\end{choices}
+
+\question[1] Qual a principal diferença entre tipos primitivos e tipos por referência em Java?
+\begin{choices}
+ \choice Tipos primitivos são mais rápidos.
+ \choice Tipos primitivos armazenam o valor, enquanto tipos por referência armazenam um endereço de memória.
+ \choice Tipos primitivos não podem ter métodos.
+ \choice Tipos por referência são sempre mutáveis.
+ \CC As alternativas 'b' e 'c' estão corretas.
+\end{choices}
+
+\question[1] O que o JRE (Java Runtime Environment) inclui?
+\begin{choices}
+ \choice Apenas o compilador Java (javac).
+ \CC A JVM e as bibliotecas padrão do Java, mas não as ferramentas de desenvolvimento.
+ \choice O JDK completo.
+ \choice Apenas a JVM.
+ \choice Ferramentas como o Scene Builder.
+\end{choices}
+
+\question[1] Qual é a saída do código a seguir?
+\begin{verbatim}
+String s1 = "Olá";
+String s2 = new String("Olá");
+String s3 = "Olá";
+System.out.println(s1 == s3);
+\end{verbatim}
+\begin{choices}
+ \choice true
+ \CC false
+ \choice Erro de compilação
+ \choice Olá
+ \choice Nada é impresso.
+\end{choices}
+
+\question[1] Qual operador é usado para negação lógica em Java?
+\begin{choices}
+ \choice `\&\&'
+ \choice `||'
+ \CC `!'
+ \choice `~'
+ \choice `NOT'
+\end{choices}
+
+\question[1] O que acontece ao tentar acessar um índice de array que não existe?
+\begin{choices}
+ \choice O programa retorna `null'.
+ \choice O programa retorna `0'.
+ \choice Ocorre um erro de compilação.
+ \CC Ocorre uma exceção em tempo de execução (`ArrayIndexOutOfBoundsException').
+ \choice O programa ignora a linha.
+\end{choices}
+
+\question[1] Qual é a finalidade do laço `do-while'?
+\begin{choices}
+ \choice É idêntico ao laço `while`.
+ \CC Executa o bloco de código pelo menos uma vez, e depois verifica a condição.
+ \choice É usado exclusivamente para percorrer arrays.
+ \choice Executa o bloco de código apenas se a condição for falsa.
+ \choice É uma versão obsoleta do laço `for`.
+\end{choices}
+
+\question[1] Como se declara uma constante em Java?
+\begin{choices}
+ \choice Usando a palavra-chave `const`.
+ \CC Usando as palavras-chave `final` e `static`.
+ \choice Apenas declarando a variável com letras maiúsculas.
+ \choice Usando a palavra-chave `constant`.
+ \choice Não é possível declarar constantes em Java.
+\end{choices}
+
+\question[1] O que o comando `continue` faz dentro de um laço?
+\begin{choices}
+ \choice Interrompe o laço imediatamente.
+ \CC Pula a iteração atual e vai para a próxima.
+ \choice Retorna ao início do método.
+ \choice Causa um erro de compilação.
+ \choice Finaliza o programa.
+\end{choices}
+
+\question[1] O que é um `enum` em Java?
+\begin{choices}
+ \choice Um tipo de laço de repetição.
+ \choice Uma biblioteca para entrada e saída de dados.
+ \CC Um tipo especial de classe usado para representar um grupo de constantes.
+ \choice Um método para ordenar arrays.
+ \choice Um operador matemático.
+\end{choices}
+
+\question[1] Qual a principal característica do paradigma de programação imperativo?
+\begin{choices}
+ \choice Descreve "o que" fazer, não "como" fazer.
+ \choice É baseado em funções matemáticas puras.
+ \CC Descreve o fluxo de controle como uma sequência de comandos que mudam o estado.
+ \choice É baseado em fatos e regras lógicas.
+ \choice É focado na resposta a eventos.
+\end{choices}
+
+\question[1] Qual método da classe `String` retorna o número de caracteres da string?
+\begin{choices}
+ \choice `size()`
+ \CC `length()`
+ \choice `count()`
+ \choice `capacity()`
+ \choice `length`
+\end{choices}
+
+\question[1] O que é a "pilha de execução" (stack) em Java?
+\begin{choices}
+ \choice Uma estrutura de dados para armazenar objetos criados com `new`.
+ \CC Uma área de memória onde são armazenadas as chamadas de métodos e variáveis locais.
+ \choice Uma fila de processos esperando para serem executados pela JVM.
+ \choice O local onde o bytecode é armazenado.
+ \choice Uma biblioteca para operações matemáticas.
+\end{choices}
+
+\question[1] Para que serve o `Maven` em um projeto Java?
+\begin{choices}
+ \choice Para escrever código Java.
+ \choice Para compilar e executar o código.
+ \CC Para gerenciar as dependências do projeto e automatizar o processo de build.
+ \choice Para criar interfaces gráficas.
+ \choice Para depurar o código.
+\end{choices}
+
+\question[1] O que é um objeto em POO?
+\begin{choices}
+ \choice Um modelo para criar outras classes.
+ \CC Uma instância de uma classe.
+ \choice Um tipo de dado primitivo.
+ \choice Um método estático.
+ \choice Um pacote de classes.
+\end{choices}
+
+\question[1] Qual dos seguintes não é um pilar da Programação Orientada a Objetos?
+\begin{choices}
+ \choice Herança
+ \choice Polimorfismo
+ \choice Encapsulamento
+ \choice Abstração
+ \CC Sequencialidade
+\end{choices}
+
+\question[1] O que acontece se uma classe não define explicitamente um construtor?
+\begin{choices}
+ \choice A classe não pode ser instanciada.
+ \choice Ocorre um erro de compilação.
+ \CC O compilador Java fornece um construtor padrão (sem argumentos) automaticamente.
+ \choice É necessário chamar um método `init()` para criar o objeto.
+ \choice A classe só pode ter métodos estáticos.
+\end{choices}
+
+\question[1] O que a palavra-chave `this` representa dentro de um método de instância?
+\begin{choices}
+ \choice A superclasse.
+ \choice A classe atual.
+ \CC A instância atual do objeto sobre o qual o método foi chamado.
+ \choice Um novo objeto que será criado.
+ \choice O pacote onde a classe está localizada.
+\end{choices}
+
+\question[1] Uma classe `Carro` "tem um" `Motor`. Que tipo de relação de POO isso representa?
+\begin{choices}
+ \choice Herança
+ \choice Polimorfismo
+ \choice Abstração
+ \CC Associação (Agregação ou Composição)
+ \choice Interface
+\end{choices}
+
+\question[1] Qual é a classe raiz (superclasse) de todas as classes em Java?
+\begin{choices}
+ \choice `Main`
+ \choice `System`
+ \choice `Class`
+ \CC `Object`
+ \choice `Java`
+\end{choices}
+
+\question[1] O que é um método `static`?
+\begin{choices}
+ \choice Um método que pertence à instância do objeto.
+ \choice Um método que não pode ser modificado.
+ \CC Um método que pertence à classe em si, e não a uma instância específica.
+ \choice Um método que só pode ser chamado de dentro da mesma classe.
+ \choice Um método que é executado automaticamente.
+\end{choices}
+
+\question[1] Qual é a saída do código a seguir?
+\begin{verbatim}
+class Pai {
+    Pai() { System.out.print("Pai "); }
+}
+class Filho extends Pai {
+    Filho() { System.out.print("Filho"); }
+}
+public class Teste {
+    public static void main(String[] args) {
+        new Filho();
+    }
+}
+\end{verbatim}
+\begin{choices}
+ \choice Filho
+ \choice Pai
+ \choice Filho Pai
+ \CC Pai Filho
+ \choice Erro de compilação
+\end{choices}
+
+\question[1] O que é polimorfismo de sobrecarga (overloading)?
+\begin{choices}
+ \choice A capacidade de uma subclasse redefinir um método da superclasse.
+ \CC A capacidade de ter vários métodos com o mesmo nome em uma classe, mas com listas de parâmetros diferentes.
+ \choice A capacidade de uma variável de referência ter diferentes formas de objeto.
+ \choice A capacidade de uma classe herdar de múltiplas classes.
+ \choice A capacidade de um método chamar a si mesmo.
+\end{choices}
+
+\question[1] Se um método na superclasse é declarado como `private`, ele pode ser sobrescrito na subclasse?
+\begin{choices}
+ \choice Sim, mas ele também deve ser `private` na subclasse.
+ \choice Sim, e pode ter qualquer modificador de acesso na subclasse.
+ \CC Não, porque o método não é visível para a subclasse.
+ \choice Apenas se a subclasse estiver no mesmo pacote.
+ \choice Sim, mas causa um aviso de compilação.
+\end{choices}
+
+\question[1] Em UML, qual símbolo representa o modificador de acesso `protected`?
+\begin{choices}
+ \choice `+` (mais)
+ \choice `-` (menos)
+ \choice `*` (asterisco)
+ \choice `~` (til)
+ \CC `\#` (cerquilha)
+\end{choices}
+
+\question[1] Qual a diferença entre a API de Datas legada (`java.util.Date`) e a nova (`java.time`)?
+\begin{choices}
+ \choice A nova API é mais lenta.
+ \CC A nova API é imutável e mais fácil de usar, enquanto a antiga é mutável.
+ \choice A nova API só funciona com o fuso horário UTC.
+ \choice A antiga API é mais completa.
+ \choice Não há grandes diferenças.
+\end{choices}
+
+\question[1] O que é uma classe `sealed` (selada) em Java?
+\begin{choices}
+ \choice Uma classe que não pode ser instanciada.
+ \CC Uma classe que restringe quais outras classes podem herdá-la.
+ \choice Uma classe cujos objetos são imutáveis.
+ \choice Uma classe que só pode ser usada dentro do pacote onde foi declarada.
+ \choice Um sinônimo para uma classe `final`.
+\end{choices}
+
+\question[1] O que é "acoplamento" em POO?
+\begin{choices}
+ \choice O grau de responsabilidade de uma única classe.
+ \choice A forma como os objetos são ligados na memória.
+ \CC O grau de interdependência entre as classes. Baixo acoplamento é desejável.
+ \choice O processo de juntar classes em um pacote.
+ \choice A velocidade com que os métodos de uma classe são executados.
+\end{choices}
+
+\question[1] O que é "coesão" em POO?
+\begin{choices}
+ \choice O grau de interdependência entre as classes.
+ \CC A medida em que os elementos de uma classe são focados em uma única responsabilidade.
+ \choice A relação entre uma superclasse e uma subclasse.
+ \choice A prática de esconder os dados de uma classe.
+ \choice A capacidade de um objeto assumir várias formas.
+\end{choices}
+
+\question[1] Qual a finalidade do pacote (`package`) em Java?
+\begin{choices}
+ \choice Definir o ponto de entrada de um programa.
+ \choice Criar um arquivo executável.
+ \choice Declarar variáveis globais.
+ \choice Controlar o fluxo de execução do programa.
+ \CC Agrupar classes relacionadas e evitar conflitos de nomes.
+\end{choices}
+
+\question[1] Se um atributo é declarado como `protected`, onde ele pode ser acessado?
+\begin{choices}
+ \choice Apenas dentro da própria classe.
+ \choice Em qualquer lugar do programa.
+ \CC Dentro da própria classe, por subclasses e por outras classes no mesmo pacote.
+ \choice Apenas por subclasses.
+ \choice Apenas por outras classes no mesmo pacote.
+\end{choices}
+
+\question[1] O que é refatoração de código?
+\begin{choices}
+ \choice O processo de escrever um código novo do zero.
+ \choice O processo de encontrar e corrigir bugs no código.
+ \choice O processo de reescrever o código para adicionar novas funcionalidades.
+ \CC O processo de reestruturar o código existente, sem alterar seu comportamento externo, para melhorar sua legibilidade e design.
+ \choice O processo de otimizar o código para que ele execute mais rápido.
+\end{choices}
+
+\question[1] Qual é o propósito do construtor de uma classe `World` no Greenfoot?
+\begin{choices}
+ \choice Definir a imagem de fundo do ator.
+ \CC Inicializar o tamanho do mundo (largura, altura) e o tamanho da célula.
+ \choice Adicionar os atores ao mundo.
+ \choice Iniciar o loop do jogo.
+ \choice Definir a velocidade de execução do cenário.
+\end{choices}
+
+\question[1] Como você pode parar a execução do cenário do jogo a partir do código?
+\begin{choices}
+ \choice `Greenfoot.endGame();`
+ \CC `Greenfoot.stop();`
+ \choice `System.exit(0);`
+ \choice `getWorld().stop();`
+ \choice `this.stop();`
+\end{choices}
+
+\question[1] O que o método `turn(int amount)` faz em um ator?
+\begin{choices}
+ \choice Move o ator para a frente na quantidade especificada.
+ \choice Vira o ator para um ângulo absoluto.
+ \CC Gira a imagem do ator em um determinado número de graus a partir de sua orientação atual.
+ \choice Define a transparência da imagem do ator.
+ \choice Vira a imagem do ator horizontalmente.
+\end{choices}
+
+\question[1] Qual método retorna uma referência ao mundo em que o ator está?
+\begin{choices}
+ \choice `getParent()`
+ \choice `getScene()`
+ \choice `getContext()`
+ \CC `getWorld()`
+ \choice `getEnvironment()`
+\end{choices}
+
+\question[1] Para exibir um texto (como uma pontuação) na tela do jogo, qual abordagem é comum?
+\begin{choices}
+ \choice Usar `System.out.println()`.
+ \choice Criar uma imagem com o texto e atribuí-la a um ator.
+ \choice Usar o método `getWorld().showText("Pontos: " + score, x, y)`.
+ \choice Usar `Greenfoot.drawText()`.
+ \CC As alternativas 'b' e 'c' são abordagens comuns.
+\end{choices}
+
+\question[1] O que o método `isAtEdge()` verifica?
+\begin{choices}
+ \choice Se o ator está tocando em outro ator na borda.
+ \choice Se o ator está no centro do mundo.
+ \CC Se o ator está tocando uma das quatro bordas do mundo.
+ \choice Se o mouse está na borda do mundo.
+ \choice Se o jogo está prestes a terminar.
+\end{choices}
+
+\question[1] Como você pode obter uma lista de todos os objetos de uma determinada classe no mundo?
+\begin{choices}
+ \choice `Greenfoot.getActors(Classe.class)`
+ \choice `World.findObjects(Classe.class)`
+ \choice `getObjectsInRange(Integer.MAX\_VALUE, Classe.class)`
+ \CC `getWorld().getObjects(Classe.class)`
+ \choice `getWorld().getAll(Classe.class)`
+\end{choices}
+
+\question[1] Qual a classe `MouseInfo` do Greenfoot permite obter?
+\begin{choices}
+ \choice Apenas se o botão do mouse foi clicado.
+ \CC As coordenadas X e Y do ponteiro do mouse, qual botão foi pressionado e qual ator está sob o mouse.
+ \choice A marca e o modelo do mouse do usuário.
+ \choice A velocidade de movimento do mouse.
+ \choice O número de cliques realizados durante o jogo.
+\end{choices}
+
+\question[1] Se você quer que um ator faça algo apenas uma vez quando é adicionado ao mundo, onde você colocaria esse código?
+\begin{choices}
+ \choice No método `act()`, dentro de um `if`.
+ \choice No construtor da classe do ator.
+ \choice Em um método especial chamado `addedToWorld(World world)`.
+ \choice No construtor da classe `World`.
+ \CC As alternativas 'b' e 'c' são locais apropriados para isso.
+\end{choices}
+
+\question[1] Para que serve o método `setRotation(int angle)`?
+\begin{choices}
+ \choice Gira o ator em `angle` graus a partir da posição atual.
+ \CC Define a rotação absoluta do ator para `angle` graus (0 é para a direita).
+ \choice Define a velocidade de rotação do ator.
+ \choice Rotaciona a imagem do mundo.
+ \choice Inicia uma animação de rotação.
+\end{choices}
+
+\question[1] Como você pode remover o próprio ator de dentro de sua classe?
+\begin{choices}
+ \choice `remove(this);`
+ \choice `delete this;`
+ \CC `getWorld().removeObject(this);`
+ \choice `this.destroy();`
+ \choice `Greenfoot.removeActor(this);`
+\end{choices}
+
+\question[1] Qual a diferença entre `getOneIntersectingObject()` e `getOneObjectAtOffset()`?
+\begin{choices}
+ \choice Não há diferença.
+ \CC `getOneIntersectingObject` verifica a colisão na posição atual, enquanto `getOneObjectAtOffset` verifica em uma posição relativa.
+ \choice `getOneIntersectingObject` retorna uma lista.
+ \choice `getOneObjectAtOffset` é mais rápido e menos preciso.
+ \choice `getOneIntersectingObject` é para colisões precisas.
+\end{choices}
+
+\question[1] Qual é o sistema de coordenadas do Greenfoot?
+\begin{choices}
+ \choice O ponto (0,0) está no centro do mundo.
+ \choice O ponto (0,0) está no canto inferior esquerdo, com Y para cima.
+ \choice O sistema de coordenadas é polar.
+ \choice O sistema de coordenadas é definido pelo programador.
+ \CC O ponto (0,0) está no canto superior esquerdo, com X para a direita e Y para baixo.
+\end{choices}
+
+% --- NOVAS QUESTÕES (101-150) ---
+
+\question[1] Qual gerenciador de pacotes é recomendado para ambientes Windows no material de referência?
+\begin{choices}
+ \choice `apt-get`
+ \choice `SDKman`
+ \CC `Scoop`
+ \choice `Homebrew`
+ \choice `Maven`
+\end{choices}
+
+\question[1] Qual paradigma de programação é baseado na avaliação de expressões e funções matemáticas puras, evitando estados mutáveis?
+\begin{choices}
+ \choice Imperativo
+ \choice Orientado a Objetos
+ \CC Funcional
+ \choice Lógico
+ \choice Orientado a Eventos
+\end{choices}
+
+\question[1] No contexto da JVM, JRE e JDK, qual deles é necessário apenas para executar uma aplicação Java, sem a necessidade de compilá-la?
+\begin{choices}
+ \choice JVM
+ \CC JRE
+ \choice JDK
+ \choice Javac
+ \choice Maven
+\end{choices}
+
+\question[1] Qual é a saída do código a seguir?
+\begin{verbatim}
+int i = 0;
+for (i = 0; i < 5; i++) {
+    // loop
+}
+System.out.println(i);
+\end{verbatim}
+\begin{choices}
+ \choice 4
+ \CC 5
+ \choice 0
+ \choice Erro de compilação, `i` fora de escopo.
+ \choice 6
+\end{choices}
+
+\question[1] Qual a forma correta de iterar sobre um array `int[] valores` usando um "for-each loop"?
+\begin{choices}
+ \choice `for (int v in valores)`
+ \CC `for (int v : valores)`
+ \choice `for (v of valores)`
+ \choice `foreach (int v in valores)`
+ \choice `valores.forEach(v -> {})`
+\end{choices}
+
+\question[1] O que o método `System.gc()` sugere à JVM?
+\begin{choices}
+ \choice Forçar o encerramento do programa.
+ \choice Limpar o console.
+ \CC Iniciar o processo de coleta de lixo (Garbage Collection).
+ \choice Gerar um código de hash para um objeto.
+ \choice Pausar a execução do programa.
+\end{choices}
+
+\question[1] Em um Diagrama de Classes UML, uma linha pontilhada com uma seta aberta de uma classe A para uma interface B representa:
+\begin{choices}
+ \choice Herança
+ \choice Associação
+ \choice Agregação
+ \CC Realização (Implementação)
+ \choice Dependência
+\end{choices}
+
+\question[1] Qual método do `ArrayList` remove um elemento em um índice específico?
+\begin{choices}
+ \choice `delete(int index)`
+ \choice `erase(int index)`
+ \CC `remove(int index)`
+ \choice `pop(int index)`
+ \choice `exclude(int index)`
+\end{choices}
+
+\question[1] O que é um "NullPointerException"?
+\begin{choices}
+ \choice Uma exceção que ocorre ao tentar dividir por zero.
+ \choice Uma exceção que ocorre ao tentar acessar um índice de array inválido.
+ \CC Uma exceção que ocorre ao tentar usar uma referência de objeto que aponta para `null`.
+ \choice Um erro de compilação.
+ \choice Uma exceção que ocorre durante a conversão de tipos.
+\end{choices}
+
+\question[1] Qual a principal característica de um método `final`?
+\begin{choices}
+ \choice Ele não pode ser chamado.
+ \CC Ele não pode ser sobrescrito (`overridden`) por subclasses.
+ \choice Ele só pode ser chamado uma vez.
+ \choice Ele deve ser estático.
+ \choice Ele não pode ter parâmetros.
+\end{choices}
+
+\question[1] Qual das seguintes afirmações sobre interfaces em Java é VERDADEIRA?
+\begin{choices}
+ \choice Uma interface pode conter atributos de instância.
+ \choice Uma classe pode implementar apenas uma interface.
+ \CC Uma interface pode herdar de múltiplas outras interfaces.
+ \choice Métodos em uma interface são `private` por padrão.
+ \choice Uma interface pode ser instanciada com `new`.
+\end{choices}
+
+\question[1] Qual o objetivo do padrão de projeto Singleton?
+\begin{choices}
+ \choice Criar múltiplos objetos de uma classe.
+ \CC Garantir que uma classe tenha apenas uma instância e fornecer um ponto de acesso global a ela.
+ \choice Separar a construção de um objeto complexo de sua representação.
+ \choice Definir uma família de algoritmos e torná-los intercambiáveis.
+ \choice Permitir que um objeto altere seu comportamento quando seu estado interno muda.
+\end{choices}
+
+\question[1] No Greenfoot, qual método pode ser usado para obter a rotação atual de um ator em graus?
+\begin{choices}
+ \choice `getAngle()`
+ \CC `getRotation()`
+ \choice `getDirection()`
+ \choice `getOrientation()`
+ \choice `getTurn()`
+\end{choices}
+
+\question[1] Para que serve o método `Greenfoot.delay(int time)`?
+\begin{choices}
+ \choice Acelera a velocidade do jogo.
+ \CC Pausa a execução do cenário por um determinado número de ciclos.
+ \choice Define a velocidade de execução para `time` quadros por segundo.
+ \choice Adiciona um atraso aleatório à ação de um ator.
+ \choice Encerra o jogo após `time` ciclos.
+\end{choices}
+
+\question[1] Qual a diferença entre `getX()` e `getExactX()` em Greenfoot?
+\begin{choices}
+ \choice Não há diferença.
+ \choice `getX()` retorna a posição X como `int`, enquanto `getExactX()` retorna como `double`.
+ \CC `getX()` retorna a posição X como `double`, enquanto `getExactX()` retorna como `int`.
+ \choice `getX()` é para o mundo, `getExactX()` é para o ator.
+ \choice `getExactX()` é um método obsoleto.
+\end{choices}
+
+\question[1] Como você pode fazer um ator se mover para trás em Greenfoot?
+\begin{choices}
+ \choice `move(-5);`
+ \choice `turn(180); move(5);`
+ \choice `setLocation(getX(), getY() + 5);`
+ \choice `moveBackwards(5);`
+ \CC As alternativas 'a' e 'b' são funcionais.
+\end{choices}
+
+\question[1] O que o método `getImage()` de um ator retorna?
+\begin{choices}
+ \choice O nome do arquivo da imagem do ator.
+ \choice As dimensões da imagem.
+ \CC Uma referência ao objeto `GreenfootImage` associado ao ator.
+ \choice Um array de pixels da imagem.
+ \choice A transparência da imagem.
+\end{choices}
+
+\question[1] Para alterar a imagem de um ator, qual método é usado?
+\begin{choices}
+ \choice `changeImage(new GreenfootImage("nova.png"));`
+ \choice `setImage(new GreenfootImage("nova.png"));`
+ \CC `setImage("nova.png");`
+ \choice `updateImage("nova.png");`
+ \choice As alternativas 'b' e 'c' são válidas.
+\end{choices}
+
+\question[1] Qual das seguintes afirmações sobre a classe `World` do Greenfoot é FALSA?
+\begin{choices}
+ \choice O construtor da classe `World` define suas dimensões.
+ \choice Uma classe `World` pode ter seu próprio método `act()`.
+ \choice A classe `World` pode adicionar e remover objetos do cenário.
+ \CC Uma classe `World` herda da classe `Actor`.
+ \choice O método `getObjects()` pode ser usado para encontrar atores no mundo.
+\end{choices}
+
+\question[1] O que é "casting" (coerção de tipo) em Java?
+\begin{choices}
+ \choice O processo de converter um tipo de dado em outro.
+ \choice O processo de lançar uma exceção.
+ \CC O processo de converter uma referência de um tipo para outro (ex: de `Object` para `String`).
+ \choice O processo de criar um objeto.
+ \choice As alternativas 'a' e 'c' estão corretas.
+\end{choices}
+
+\question[1] Qual é o valor inicial padrão para atributos do tipo `boolean` em uma classe?
+\begin{choices}
+ \choice `true`
+ \CC `false`
+ \choice `null`
+ \choice `0`
+ \choice Requer inicialização explícita.
+\end{choices}
+
+\question[1] Qual é o valor inicial padrão para atributos de referência (objetos) em uma classe?
+\begin{choices}
+ \choice Um novo objeto vazio.
+ \choice `""` (string vazia).
+ \CC `null`
+ \choice `0`
+ \choice Requer inicialização explícita.
+\end{choices}
+
+\question[1] Qual a principal desvantagem de usar `==` para comparar Strings?
+\begin{choices}
+ \choice É mais lento que `.equals()`.
+ \choice Lança uma exceção se as strings forem diferentes.
+ \CC Compara as referências de memória, não o conteúdo, o que pode levar a resultados inesperados.
+ \choice Não funciona para strings criadas com `new String()`.
+ \choice Só funciona se as strings estiverem em letras minúsculas.
+\end{choices}
+
+\question[1] O que a palavra-chave `implements` indica?
+\begin{choices}
+ \choice Que uma classe herda de outra classe.
+ \CC Que uma classe se compromete a fornecer uma implementação para os métodos de uma interface.
+ \choice Que um método está sendo sobrescrito.
+ \choice Que uma classe está usando um pacote externo.
+ \choice Que uma variável é uma constante.
+\end{choices}
+
+\question[1] Qual das seguintes opções descreve melhor uma classe abstrata?
+\begin{choices}
+ \choice Uma classe que não pode ser instanciada e serve como modelo para subclasses.
+ \choice Uma classe que só pode ter métodos abstratos.
+ \CC Uma classe que não pode ser instanciada, mas pode conter tanto métodos abstratos quanto concretos.
+ \choice Uma classe que não pode ter construtores.
+ \choice Uma classe que já vem pronta no JDK.
+\end{choices}
+
+\question[1] Qual é a saída do código a seguir?
+\begin{verbatim}
+public class Teste {
+    public static void main(String[] args) {
+        try {
+            System.out.print("A");
+            int x = 1 / 0;
+            System.out.print("B");
+        } catch (Exception e) {
+            System.out.print("C");
+        } finally {
+            System.out.print("D");
+        }
+    }
+}
+\end{verbatim}
+\begin{choices}
+ \choice A
+ \choice AB
+ \choice AC
+ \CC ACD
+ \choice ABCD
+\end{choices}
+
+\question[1] Em Greenfoot, se um ator está na posição (10, 20) e executa `setLocation(getX() + 5, getY() - 5)`, qual será sua nova posição?
+\begin{choices}
+ \choice (10, 20)
+ \choice (5, 25)
+ \CC (15, 15)
+ \choice (5, 15)
+ \choice (15, 25)
+\end{choices}
+
+\question[1] Qual método da classe `GreenfootImage` pode ser usado para desenhar um retângulo preenchido?
+\begin{choices}
+ \choice `drawRect(x, y, w, h)`
+ \CC `fillRect(x, y, w, h)`
+ \choice `drawRectangle(x, y, w, h)`
+ \choice `fillRectangle(x, y, w, h)`
+ \choice `paintRect(x, y, w, h)`
+\end{choices}
+
+\question[1] Para obter a altura da imagem de um ator, qual combinação de métodos é correta?
+\begin{choices}
+ \choice `this.getHeight()`
+ \choice `GreenfootImage.getHeight()`
+ \CC `getImage().getHeight()`
+ \choice `Actor.getImageHeight()`
+ \choice `getHeight(this)`
+\end{choices}
+
+\question[1] O que o método `getObjectsInRange(int range, Class cls)` do Greenfoot faz?
+\begin{choices}
+ \choice Retorna todos os objetos da classe `cls` no mundo.
+ \CC Retorna uma lista de objetos da classe `cls` que estão dentro de um raio `range` do ator.
+ \choice Retorna o objeto mais próximo da classe `cls`.
+ \choice Verifica se há algum objeto da classe `cls` no alcance especificado.
+ \choice Retorna o número de objetos da classe `cls` no alcance.
+\end{choices}
+
+\question[1] Qual das seguintes opções é a melhor prática para o nome de uma classe em Java?
+\begin{choices}
+ \choice `minhaClasse`
+ \CC `MinhaClasse`
+ \choice `minha\_classe`
+ \choice `MINHA\_CLASSE`
+ \choice `minha-classe`
+\end{choices}
+
+\question[1] Qual das seguintes opções é a melhor prática para o nome de uma constante em Java?
+\begin{choices}
+ \choice `minhaConstante`
+ \choice `MinhaConstante`
+ \choice `minha\_constante`
+ \CC `MINHA\_CONSTANTE`
+ \choice `minha-constante`
+\end{choices}
+
+\end{multicols}	
+     \end{questions}	
+\printmyanswers
+\end{document}

@@ -1,0 +1,71 @@
+<template><div><h1 id="uml" tabindex="-1"><a class="header-anchor" href="#uml"><span>UML</span></a></h1>
+<h2 id="estereotipo-de-uma-classe-em-uml" tabindex="-1"><a class="header-anchor" href="#estereotipo-de-uma-classe-em-uml"><span>Estereótipo de uma Classe em UML</span></a></h2>
+<figure>
+<img src="https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuNA0iv9p4ekB5VpoSrDT4fr1xDHgBWKWI2mfoamgBSal1lDoKqloK_ABDJIvQhaSKlDIm6P0Q000" alt="{kroki}" kroki="" loading="lazy">
+<figcaption>Modelo de uma classe em UML.</figcaption>
+</figure>
+<h3 id="estrutura-basica-de-uma-classe" tabindex="-1"><a class="header-anchor" href="#estrutura-basica-de-uma-classe"><span>Estrutura básica de uma classe</span></a></h3>
+<div class="language-java line-numbers-mode" data-highlighter="shiki" data-ext="java" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">public</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> class</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> Carro</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
+<span class="line"></span>
+<span class="line highlighted"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    private</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> String</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> cor</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line highlighted"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    private</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> String</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> marca</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line highlighted"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    private</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> int</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> velocidade</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"></span>
+<span class="line highlighted"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    public</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> Carro</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">String</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic"> cor</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">String</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic"> marca</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">){</span></span>
+<span class="line highlighted"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        this</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">cor</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> cor;</span></span>
+<span class="line highlighted"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        this</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">marca</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> marca;</span></span>
+<span class="line highlighted"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        velocidade </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line highlighted"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    }</span></span>
+<span class="line"></span>
+<span class="line highlighted"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    public</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> void</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> acelerar</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(){</span></span>
+<span class="line highlighted"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        velocidade++;</span></span>
+<span class="line highlighted"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    }</span></span>
+<span class="line highlighted"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    public</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> void</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> parar</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(){</span></span>
+<span class="line highlighted"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        velocidade </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">; </span></span>
+<span class="line highlighted"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    }</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-highlighter="shiki" data-ext="java" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">class</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> Programa</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">{</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">  public</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> static</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> void</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> main</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">String</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">[] </span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">args</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">){</span></span>
+<span class="line"><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">    Carro</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> c1</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> new</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> Carro</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"vermelha"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"BMW"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">);</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    //Carro c2 = new Carro();// ERRO</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  }</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="representacao-uml" tabindex="-1"><a class="header-anchor" href="#representacao-uml"><span>Representação UML</span></a></h3>
+<figure>
+<img src="https://www.plantuml.com/plantuml/svg/LOv12eGm34NtFKMMYZDtA7W4J_19mr2ehQJLZSpT5GCpcato7taXlZPeM-Va_6_YX5ffX6gXtJawwpqrZVb3NFIHPoZ3ICoDDac5Oq0GquRhIFUNNtGNUrlQIWm4bYGAxUvmWP6lyvB3zQNr0m00" alt="{kroki}" kroki="" loading="lazy">
+<figcaption> UML da classe carro.</figcaption>
+</figure>
+<ul>
+<li>
+<p>A UML é uma notação que podemos utilizar para representar classes e objetos em modelos computacionais</p>
+</li>
+<li>
+<p>Linguagem para representação de modelos visuais com um significado especifico e padronizado</p>
+</li>
+<li>
+<p>UML não é uma linguagem de programação</p>
+</li>
+<li>
+<p>Os modelos são representados através de diagramas que possuem semântica própria<br>
+O diagrama que representa a descrição das classes é o <strong>Diagrama de Classes</strong></p>
+</li>
+</ul>
+<h2 id="dominio-de-aplicacao" tabindex="-1"><a class="header-anchor" href="#dominio-de-aplicacao"><span>Domínio de Aplicação</span></a></h2>
+<ul>
+<li>Um domínio é composto pelas entidades, informações e processos relacionados a um determinado contexto.</li>
+<li>Uma aplicação pode ser desenvolvida para automatizar ou tornar factível as tarefas de um domínio.</li>
+<li>Portanto, uma aplicação é basicamente o &quot;reflexo&quot; de um domínio.</li>
+<li>Para exemplificar, suponha que estamos interessados em desenvolver uma aplicação para facilitar as tarefas do cotidiano de um banco. Podemos identificar clientes, funcionários, agências e contas como entidades desse domínio. Assim como podemos identificar as informações e os processos relacionados a essas entidades.</li>
+</ul>
+<h3 id="outras-classes-do-dominio-de-um-sistema-bancario" tabindex="-1"><a class="header-anchor" href="#outras-classes-do-dominio-de-um-sistema-bancario"><span>Outras classes do domínio de um sistema bancário</span></a></h3>
+<figure>
+<img src="https://www.plantuml.com/plantuml/svg/NOz13i9024NtSmgEKjFUmCGz3gGXOI2PeIlZtHshdHftV3x_0LCBhB4LJTEeKbPi3M1MOGk6HmAuHXLR0SmBToaM0Db9La_FCz01w0lFbKd2z-0-QLlXwZyOmi25RwX2I7mYBYjR5Zo2tzomPxVuDmSqVyxj3VBjhWmDbVoKAaNYlMjYe_udm56z0000" alt="{kroki}" kroki="" loading="lazy">
+<figcaption> UML de classes do domínio bancários.</figcaption>
+</figure>
+<h2 id="exercicios" tabindex="-1"><a class="header-anchor" href="#exercicios"><span>Exercícios</span></a></h2>
+<ul>
+<li><RouteLink to="/posts/exercicios/07_exercicio_modelagem_tv.html">Exercício UML</RouteLink></li>
+</ul>
+</div></template>
+
+

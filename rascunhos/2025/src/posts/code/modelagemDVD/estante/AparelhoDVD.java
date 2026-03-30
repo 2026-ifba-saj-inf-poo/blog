@@ -1,0 +1,107 @@
+package modelagemDVD.estante;
+
+/*
+Utilizando os conhecimentos de O.O. construa um programa utilizando as informações abaixo. As características de um DVD devem ser definidas de acordo com as informações a seguir. Ao ser criado o DVD inicialmente está desligado. Seu volume pode alterar de 1 a 5 sendo que o nível inicial é 2. É possível inserir um filme no DVD. O filme possui as seguintes caraterísticas: nome, categoria e duração.
+
+As seguintes operações podem ser realizadas pelo DVD:
+
+ligar e desligar;
+aumentar e diminuir volume;
+inserir filme;
+play e stop.
+O programa deve obedecer as seguintes regras:
+
+Só é possível fazer qualquer uma destas operações se o DVD estiver ligado;
+Só é possível dar play no DVD se existir algum filme inserido;
+Só é possível dar stop se o DVD estiver em play;
+Ao dar play deve aparecer o nome e a duração do filme que está sendo exibido.
+
+ */
+class AparelhoDVD {
+    boolean ligado;
+    int volume;
+    Filme filme;
+    boolean emPlay;
+    //Ao ser criado o DVD inicialmente está desligado. Seu volume pode alterar de 1 a 5 sendo que o nível inicial é 2.
+    AparelhoDVD(){
+        ligado = false;
+        volume = 2;
+        emPlay = false;
+    }
+    //Seu volume pode alterar de 1 a 5 
+    void aumentarVolume(){
+        if(ligado){
+            if(volume<5){
+                volume++;
+            }
+        }
+    }
+    public void setVolume(int volume) {
+        if(ligado){
+            if(volume>=1 && volume<=5){
+                this.volume = volume;
+            }
+        }
+    }
+
+    //Seu volume pode alterar de 1 a 5 
+    void diminuirVolume(){
+        if(ligado && volume>1){
+            volume--;
+        }
+    }
+
+    //É possível inserir um filme no DVD. 
+    void inserirFilme(Filme filme){
+        if(ligado){
+            if(this.filme==null){
+                this.filme = filme;
+            }
+        }
+    }
+    Filme removerFilme(){
+        stop();
+        Filme filmeRemovido = this.filme;
+        this.filme = null;
+        return filmeRemovido; 
+    }
+
+    //ligar e desligar;
+    void ligar(){
+        ligado = true;
+    }
+    void desligar(){                
+        ligado = false;
+    }
+    //play e stop.
+    //Só é possível dar play no DVD se existir algum filme inserido
+    //Ao dar play deve aparecer o nome e a duração do filme que está sendo exibido.
+    String play(){
+        if(ligado){
+            if(filme!= null){
+                emPlay = true;
+                return filme.getNome()+" - "+filme.getDuracao();
+            }
+        }
+        return null;
+    }
+    //Só é possível dar stop se o DVD estiver em play;
+    void stop(){
+        if(ligado){
+            if(emPlay){
+                emPlay = false;
+            }
+        }
+    }
+    @Override
+    public String toString() {
+        return "AparelhoDVD [ligado=" + ligado + ", volume=" + volume + ", filme=" + filme + ", emPlay=" + emPlay + "]";
+    }
+
+    boolean isLigado() {
+        return ligado;
+    }
+    void setLigado(boolean ligado) {
+        this.ligado = ligado;
+    }    
+}

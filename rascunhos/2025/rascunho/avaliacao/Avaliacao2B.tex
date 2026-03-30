@@ -1,0 +1,384 @@
+\documentclass{exam}
+\usepackage{ModeloIFBA}
+%\usepackage[alf]{abntex2cite}
+\usepackage{multicol}
+\usepackage{adjustbox}
+\usepackage{multicol}
+
+\setlength\columnsep{30pt}
+
+
+\renewcommand{\curso}{Tecnologia em Análise e Desenvolvimento de Sistemas }
+\renewcommand{\materia}{Programação Orientada a Objetos}
+\renewcommand{\turma}{2025.1}
+\renewcommand{\professor}{Leandro Costa Souza}
+\renewcommand{\avaliacao}{Prova Unidade II - Modelo B}
+\renewcommand{\dataavaliacao}{01/09/2025}
+
+
+\newcommand{\duracao}{1h 40min}
+\newcounter{solcount}
+\setcounter{solcount}{1}
+\newcommand\CC{
+    \CorrectChoice\label{sol:\arabic{solcount}}
+    \stepcounter{solcount}
+}
+
+\newcommand\printmyanswers{
+\newpage
+\section*{\centering Answers Sheet}
+    \foreach \x in {1,...,\thequestion}{
+    \noindent
+        \x.\ref{sol:\x}\\par
+    }
+}
+
+\printanswers
+
+\begin{document}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabularx}{\textwidth}{rrXrl}
+\multirow{5}{*}{\ifbalogo{1.7in}} & \textbf{Curso:} & \multicolumn{3}{l}{ \curso } \\
+& \textbf{Matéria:} & \materia \space & \textbf{Turma:} & \small{\turma}  \\
+& \textbf{Professor:} & \professor & & \\
+& \textbf{Aluno:} & \hrulefill & \textbf{Data:} & \dataavaliacao \\
+\end{tabularx}
+\end{adjustbox}
+\begin{tabularx}{\textwidth}{XcX}
+ & \textbf{\avaliacao} &  \ \hline
+\end{tabularx}	
+	\input{orientacoes}
+
+	\begin{questions}
+\begin{multicols}{2}
+
+% --- AMBIENTE E FERRAMENTAS (4 Questões) ---
+
+\question[1] O que a sigla JDK significa no contexto do desenvolvimento Java?
+\begin{choices}
+ \choice Java Runtime Kit - Kit de Execução Java
+ \CC Java Development Kit - Kit de Desenvolvimento Java
+ \choice Java Deployment Kit - Kit de Implantação Java
+ \choice Java Dynamic Kit - Kit Dinâmico Java
+ \choice Java Developer Kernel - Núcleo de Desenvolvimento Java
+\end{choices}
+
+\question[1] Qual é a função da JVM (Java Virtual Machine)?
+\begin{choices}
+ \choice Compilar o código-fonte Java (.java) em bytecode (.class).
+ \CC Fornecer um ambiente para executar o bytecode Java em qualquer plataforma.
+ \choice Depurar o código Java durante o desenvolvimento.
+ \choice Gerenciar as dependências do projeto.
+ \choice Escrever código Java automaticamente.
+\end{choices}
+
+\question[1] O que o JRE (Java Runtime Environment) inclui?
+\begin{choices}
+ \choice Apenas o compilador Java (javac).
+ \CC A JVM e as bibliotecas padrão do Java, mas não as ferramentas de desenvolvimento.
+ \choice O JDK completo.
+ \choice Apenas a JVM.
+ \choice Ferramentas como o VSCode.
+\end{choices}
+
+\question[1] No contexto da JVM, JRE e JDK, qual deles é necessário apenas para executar uma aplicação Java, sem a necessidade de compilá-la?
+\begin{choices}
+ \choice JVM
+ \CC JRE
+ \choice JDK
+ \choice Javac
+ \choice Maven
+\end{choices}
+
+% --- FUNDAMENTOS DE JAVA (10 Questões) ---
+
+\question[1] Qual a principal diferença entre tipos primitivos e tipos por referência em Java?
+\begin{choices}
+ \choice Tipos primitivos são mais rápidos.
+ \choice Tipos primitivos armazenam o valor, enquanto tipos por referência armazenam um endereço de memória.
+ \choice Tipos primitivos não podem ter métodos.
+ \choice Tipos por referência são sempre mutáveis.
+ \CC As alternativas 'b' e 'c' estão corretas.
+\end{choices}
+
+\question[1] Como se declara uma constante em Java?
+\begin{choices}
+ \choice Usando a palavra-chave `const`.
+ \CC Usando as palavras-chave `final` e `static`.
+ \choice Apenas declarando a variável com letras maiúsculas.
+ \choice Usando a palavra-chave `constant`.
+ \choice Não é possível declarar constantes em Java.
+\end{choices}
+
+\question[1] O que é a "pilha de execução" (stack) em Java?
+\begin{choices}
+ \choice Uma estrutura de dados para armazenar objetos criados com `new`.
+ \CC Uma área de memória onde são armazenadas as chamadas de métodos e variáveis locais.
+ \choice Uma fila de processos esperando para serem executados pela JVM.
+ \choice O local onde o bytecode é armazenado.
+ \choice Uma biblioteca para operações matemáticas.
+\end{choices}
+
+\question[1] Qual a principal desvantagem de usar `==' para comparar Strings?
+\begin{choices}
+ \choice É mais lento que `.equals()`.
+ \choice Lança uma exceção se as strings forem diferentes.
+ \CC Compara as referências de memória, não o conteúdo, o que pode levar a resultados inesperados.
+ \choice Não funciona para strings criadas com `new String()`.
+ \choice Só funciona se as strings estiverem em letras minúsculas.
+\end{choices}
+
+\question[1] Qual é a saída do código a seguir?
+\lstinputlisting{code/Ola.java}
+\begin{choices}
+ \choice true
+ \CC false
+ \choice Erro de compilação
+ \choice `Olá`
+ \choice Nada é impresso.
+\end{choices}
+
+\question[1] Qual é a saída do código a seguir?
+\lstinputlisting{code/For.java}
+\begin{choices}
+ \choice 4
+ \CC 5
+ \choice 0
+ \choice Erro de compilação, `i' fora de escopo.
+ \choice 6
+\end{choices}
+
+\question[1] Qual dos seguintes tipos de dados em Java é usado para armazenar números inteiros?
+\begin{choices}
+ \choice double
+ \choice float
+ \CC int
+ \choice char
+ \choice boolean
+\end{choices}
+
+\question[1] Qual operador é usado para negação lógica em Java?
+\begin{choices}
+ \choice `&&`
+ \choice `||`
+ \CC `!'
+ \choice `~'
+ \choice `NOT'
+\end{choices}
+
+\question[1] Qual das seguintes opções é a melhor prática para definir o nome de uma classe em Java?
+\begin{choices}
+ \choice `minhaClasse`
+ \CC `MinhaClasse`
+ \choice `minha_classe`
+ \choice `MINHA_CLASSE`
+ \choice `minha-classe`
+\end{choices}
+
+\question[1] Qual estrutura de repetição é mais adequada quando não se sabe o número exato de iterações, mas se conhece a condição de parada?
+\begin{choices}
+ \choice for
+ \choice foreach
+ \CC while
+ \choice if-else
+ \choice switch
+\end{choices}
+
+% --- CONCEITOS DE POO (13 Questões) ---
+
+\question[1] O que a anotação `@Override' indica?
+\begin{choices}
+ \choice Que o método está sobrecarregado.
+ \CC Que o método está sendo sobrescrito de uma superclasse.
+ \choice Que o método é a versão final e não pode ser modificado.
+ \choice Que o método é obsoleto e não deve ser usado.
+ \choice Que o método é estático.
+\end{choices}
+
+\question[1] Qual a diferença entre sobrecarga (overloading) e sobrescrita (overriding)?
+\begin{choices}
+ \choice Sobrecarga é em classes diferentes, sobrescrita é na mesma classe.
+ \choice Sobrecarga usa a mesma assinatura, sobrescrita usa assinaturas diferentes.
+ \CC Sobrecarga é ter métodos com mesmo nome e parâmetros diferentes na mesma classe; sobrescrita é redefinir um método da superclasse na subclasse.
+ \choice Sobrecarga é para construtores, sobrescrita é para métodos comuns.
+ \choice Não há diferença, são termos sinônimos.
+\end{choices}
+
+\question[1] Qual a diferença fundamental entre Agregação e Composição?
+\begin{choices}
+ \choice Na Composição, as partes podem existir sem o todo; na Agregação, não.
+ \CC Na Agregação, as partes podem existir sem o todo; na Composição, as partes dependem do ciclo de vida do todo.
+ \choice Agregação é uma relação ``é um'', enquanto Composição é ``tem um''.
+ \choice Não há diferença, são a mesma coisa.
+ \choice Composição usa a palavra-chave `composes', enquanto Agregação usa `aggregates'.
+\end{choices}
+
+\question[1] Se uma classe é declarada como `final', o que isso significa?
+\begin{choices}
+ \choice Que ela não pode ser instanciada.
+ \choice Que todos os seus métodos são estáticos.
+ \CC Que ela não pode ser herdada por outra classe.
+ \choice Que ela só pode ter um único objeto.
+ \choice Que seus atributos não podem ser modificados.
+\end{choices}
+
+\question[1] Qual é a saída do código a seguir?
+\lstinputlisting{code/Veiculo.java}
+\begin{choices}
+ \choice `Veículo se move`
+ \CC `Carro acelera`
+ \choice Erro de compilação
+ \choice `Veículo se move'`Carro acelera'
+ \choice Nenhuma saída
+\end{choices}
+
+\question[1] Qual é a saída do código a seguir?
+\lstinputlisting{code/Pai.java}
+\begin{choices}
+ \choice `Filho`
+ \choice `Pai`
+ \choice `Filho` `Pai`
+ \CC `Pai` `Filho`
+ \choice Erro de compilação
+\end{choices}
+
+\question[1] O que é encapsulamento?
+\begin{choices}
+ \choice A capacidade de uma classe herdar características de outra.
+ \CC A prática de agrupar dados e métodos em uma unidade, escondendo os detalhes internos.
+ \choice A capacidade de um objeto ter múltiplas formas.
+ \choice A criação de múltiplos objetos a partir da mesma classe.
+ \choice A organização de classes em pacotes.
+\end{choices}
+
+\question[1] O que é herança em POO?
+\begin{choices}
+ \choice A criação de uma cópia exata de um objeto.
+ \CC Um mecanismo que permite a uma classe adquirir os atributos e métodos de outra.
+ \choice A capacidade de um método ter o mesmo nome mas diferentes parâmetros.
+ \choice A prática de esconder a complexidade interna de um objeto.
+ \choice A relação onde um objeto contém outro.
+\end{choices}
+
+\question[1] Qual é a classe raiz (superclasse) de todas as classes em Java?
+\begin{choices}
+ \choice `Main`
+ \choice `System`
+ \choice `Class`
+ \CC `Object`
+ \choice `Java`
+\end{choices}
+
+\question[1] O que o método `toString()' da classe `Object' faz por padrão?
+\begin{choices}
+ \choice Retorna uma representação em String vazia do objeto.
+ \CC Retorna o nome da classe seguido por "@" e o código hash do objeto.
+ \choice Retorna `null`.
+ \choice Lança uma exceção.
+ \choice Retorna uma lista de todos os atributos e seus valores.
+\end{choices}
+
+\question[1] Uma classe `Carro' "tem um" `Motor'. Que tipo de relação de POO isso representa?
+\begin{choices}
+ \choice Herança
+ \choice Polimorfismo
+ \choice Abstração
+ \CC Associação (Agregação ou Composição)
+ \choice Interface
+\end{choices}
+
+\question[1] O que acontece se uma classe não define explicitamente um construtor?
+\begin{choices}
+ \choice A classe não pode ser instanciada.
+ \choice Ocorre um erro de compilação.
+ \CC O compilador Java fornece um construtor padrão (sem argumentos) automaticamente.
+ \choice É necessário chamar um método `init()` para criar o objeto.
+ \choice A classe só pode ter métodos estáticos.
+\end{choices}
+
+\question[1] Qual modificador de acesso torna um atributo ou método acessível apenas instâncias da própria classe?
+\begin{choices}
+ \choice public
+ \choice protected
+ \choice default
+ \CC private
+ \choice static
+\end{choices}
+
+% --- GREENFOOT (8 Questões) ---
+
+\question[1] Qual método é usado para detectar se um ator está tocando em outro de uma classe específica?
+\begin{choices}
+ \choice `isColliding(Classe.class)`
+ \choice `intersects(Classe.class)`
+ \choice `hasContact(Classe.class)`
+ \choice `onCollision(Classe.class)`
+ \CC `isTouching(Classe.class)`
+\end{choices}
+
+\question[1] Como você removeria do mundo um objeto da classe `Moeda` que o ator atual está tocando?
+\begin{choices}
+ \choice `delete(Moeda.class);`
+ \CC `removeTouching(Moeda.class);`
+ \choice `getWorld().removeObject( getTouching( Moeda.class));`
+ \choice `destroy(Moeda.class);`
+ \choice `getWorld().removeTouching(Moeda.class);`
+\end{choices}
+
+\question[1] O que o método `getOneIntersectingObject(Classe.class)' retorna se não há intersecção?
+\begin{choices}
+ \choice `false`
+ \choice `0`
+ \CC `null`
+ \choice Lança uma exceção `NullPointerException`.
+ \choice `-1`
+\end{choices}
+
+\question[1] Qual método do Greenfoot é usado para verificar se uma tecla específica está sendo pressionada?
+\begin{choices}
+ \choice `Greenfoot.isKeyPressed()`
+ \CC `Greenfoot.isKeyDown()`
+ \choice `Greenfoot.getKey()`
+ \choice `Greenfoot.checkKey()`
+ \choice `Greenfoot.isPressed()`
+\end{choices}
+
+\question[1] Qual método retorna uma referência ao mundo em que o ator está?
+\begin{choices}
+ \choice `getParent()`
+ \choice `getScene()`
+ \choice `getContext()`
+ \CC `getWorld()`
+ \choice `getEnvironment()`
+\end{choices}
+
+\question[1] Se você quer que um ator faça algo apenas uma vez quando é adicionado ao mundo, onde você colocaria esse código?
+\begin{choices}
+ \choice No método `act()`, dentro de um `if`.
+ \CC No construtor da classe do ator.
+ \choice No construtor da classe `World`.
+ \choice Na classe pai `Actor`.
+\end{choices}
+
+\question[1] Como você pode remover o próprio ator de dentro de sua classe?
+\begin{choices}
+ \choice `remove(this);`
+ \choice `delete this;`
+ \CC `getWorld().removeObject(this);`
+ \choice `this.destroy();`
+ \choice `Greenfoot.removeActor(this);`
+\end{choices}
+
+\question[1] Qual é o sistema de coordenadas do Greenfoot?
+\begin{choices}
+ \choice O ponto (0,0) está no centro do mundo.
+ \choice O ponto (0,0) está no canto inferior esquerdo, com Y para cima.
+ \choice O sistema de coordenadas é polar.
+ \choice O sistema de coordenadas é definido pelo programador.
+ \CC O ponto (0,0) está no canto superior esquerdo, com X para a direita e Y para baixo.
+\end{choices}
+
+\end{multicols}	
+     \end{questions}	
+\printmyanswers
+\end{document}

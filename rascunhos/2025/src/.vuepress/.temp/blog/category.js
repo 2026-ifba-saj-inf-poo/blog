@@ -1,0 +1,13 @@
+export const categoriesMap = JSON.parse("{\"category\":{\"/\":{\"path\":\"/category/\",\"map\":{\"multimidia\":{\"path\":\"/category/multimidia/\",\"indexes\":[0]},\"aula\":{\"path\":\"/category/aula/\",\"indexes\":[1,2,3,4,5,6,7,8,9,10,11,12,13,14]},\"trabalho\":{\"path\":\"/category/trabalho/\",\"indexes\":[15,16]},\"Plano de Curso\":{\"path\":\"/category/plano-de-curso/\",\"indexes\":[17]},\"exercicio\":{\"path\":\"/category/exercicio/\",\"indexes\":[18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38]},\"entrega\":{\"path\":\"/category/entrega/\",\"indexes\":[18,22,25,26,28,29,30,35,37]},\"pratica\":{\"path\":\"/category/pratica/\",\"indexes\":[26]}}}},\"tag\":{\"/\":{\"path\":\"/tag/\",\"map\":{\"links\":{\"path\":\"/tag/links/\",\"indexes\":[0]},\"java\":{\"path\":\"/tag/java/\",\"indexes\":[22,23,6,28,29,30,31,32,33,34,35,12,36,37,38,13,14]},\"paradigmas\":{\"path\":\"/tag/paradigmas/\",\"indexes\":[14]},\"objeto\":{\"path\":\"/tag/objeto/\",\"indexes\":[12]},\"classe\":{\"path\":\"/tag/classe/\",\"indexes\":[12]},\"construtor\":{\"path\":\"/tag/construtor/\",\"indexes\":[7,11]},\"UML\":{\"path\":\"/tag/uml/\",\"indexes\":[10]},\"associacao\":{\"path\":\"/tag/associacao/\",\"indexes\":[9]},\"agregacao\":{\"path\":\"/tag/agregacao/\",\"indexes\":[9]},\"composicao\":{\"path\":\"/tag/composicao/\",\"indexes\":[9]},\"vetor\":{\"path\":\"/tag/vetor/\",\"indexes\":[8]},\"lista\":{\"path\":\"/tag/lista/\",\"indexes\":[8]},\"pacote\":{\"path\":\"/tag/pacote/\",\"indexes\":[7]},\"encapsulamento\":{\"path\":\"/tag/encapsulamento/\",\"indexes\":[7]},\"datas\":{\"path\":\"/tag/datas/\",\"indexes\":[6]},\"heranca\":{\"path\":\"/tag/heranca/\",\"indexes\":[20,21,4,24,25,26,27,5]},\"entrega\":{\"path\":\"/tag/entrega/\",\"indexes\":[4]},\"greenfoot\":{\"path\":\"/tag/greenfoot/\",\"indexes\":[15,16]},\"jogo\":{\"path\":\"/tag/jogo/\",\"indexes\":[15,16]},\"polimorfismo\":{\"path\":\"/tag/polimorfismo/\",\"indexes\":[21,3]},\"classes-abstratas\":{\"path\":\"/tag/classes-abstratas/\",\"indexes\":[2]},\"interface\":{\"path\":\"/tag/interface/\",\"indexes\":[20,2]},\"exception\":{\"path\":\"/tag/exception/\",\"indexes\":[18,19,1]},\"ementa\":{\"path\":\"/tag/ementa/\",\"indexes\":[17]},\"abstratas\":{\"path\":\"/tag/abstratas/\",\"indexes\":[20]}}}}}");
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept();
+  if (__VUE_HMR_RUNTIME__.updateBlogCategory)
+    __VUE_HMR_RUNTIME__.updateBlogCategory(categoriesMap);
+}
+
+if (import.meta.hot)
+  import.meta.hot.accept(({ categoriesMap }) => {
+    __VUE_HMR_RUNTIME__.updateBlogCategory(categoriesMap);
+  });
+

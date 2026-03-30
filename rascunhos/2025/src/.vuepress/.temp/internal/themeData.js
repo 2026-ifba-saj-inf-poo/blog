@@ -1,0 +1,14 @@
+export const themeData = JSON.parse("{\"encrypt\":{},\"author\":{\"name\":\"IFBA SAJ\",\"url\":\"https://github.com/leandro-costa\"},\"copyright\":false,\"lastUpdated\":false,\"contributors\":false,\"logo\":\"/logo.svg\",\"repo\":\"2025-ifba-saj-inf-poo/blog\",\"docsDir\":\"src\",\"footer\":\"Material de aula da disciplina de POO IFBA SAJ\",\"displayFooter\":true,\"blog\":{\"description\":\"Material de Aula\",\"avatar\":\"/assets/icon/icon-512.png\",\"medias\":{\"Email\":\"mailto:leandro.costa@ifba.edu.br\",\"GitHub\":\"https://github.com/leandro-costa\"}},\"locales\":{\"/\":{\"lang\":\"en-US\",\"navbarLocales\":{\"langName\":\"English\",\"selectLangAriaLabel\":\"Select language\"},\"metaLocales\":{\"author\":\"Author\",\"date\":\"Data\",\"origin\":\"Original\",\"views\":\"Page views\",\"category\":\"Category\",\"tag\":\"Tag\",\"readingTime\":\"Reading Time\",\"words\":\"Words\",\"toc\":\"Nesta Página\",\"prev\":\"Prev\",\"next\":\"Next\",\"contributors\":\"Contributors\",\"editLink\":\"Edite esta página no GitHub\",\"print\":\"Print\"},\"blogLocales\":{\"article\":\"Articles\",\"articleList\":\"Article List\",\"category\":\"Category\",\"tag\":\"Tag\",\"timeline\":\"Timeline\",\"timelineTitle\":\"Yesterday Once More!\",\"all\":\"All\",\"intro\":\"Personal Intro\",\"star\":\"Star\",\"empty\":\"No $text\"},\"paginationLocales\":{\"prev\":\"Prev\",\"next\":\"Next\",\"navigate\":\"Jump to\",\"action\":\"Go\",\"errorText\":\"Please enter a number between 1 and $page !\"},\"outlookLocales\":{\"themeColor\":\"Theme Color\",\"darkmode\":\"Theme Mode\",\"fullscreen\":\"Full Screen\"},\"routerLocales\":{\"skipToContent\":\"Skip to main content\",\"notFoundTitle\":\"Page not found\",\"notFoundMsg\":[\"There’s nothing here.\",\"How did we get here?\",\"That’s a Four-Oh-Four.\",\"Looks like we've got some broken links.\"],\"back\":\"Go back\",\"home\":\"Take me home\"},\"navbar\":[\"/\",{\"text\":\"Publicações\",\"icon\":\"pen-to-square\",\"link\":\"/article/\"},{\"text\":\"Categoria\",\"icon\":\"list\",\"link\":\"/category/\"},{\"text\":\"Tag\",\"icon\":\"tag\",\"link\":\"/tag/\"},{\"text\":\"Exercícios\",\"icon\":\"book\",\"link\":\"/category/exercicio/\"},{\"text\":\"Trabalho\",\"icon\":\"laptop-code\",\"link\":\"/category/trabalho/\"},{\"text\":\"Para Entrega\",\"icon\":\"paper-plane\",\"link\":\"/category/entrega/\"},{\"text\":\"Print\",\"icon\":\"print\",\"link\":\"/posts/print.md\"},{\"text\":\"Timeline\",\"icon\":\"clock\",\"link\":\"/timeline/\"}],\"sidebar\":{\"/posts/\":\"structure\"}}}}")
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateThemeData) {
+    __VUE_HMR_RUNTIME__.updateThemeData(themeData)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ themeData }) => {
+    __VUE_HMR_RUNTIME__.updateThemeData(themeData)
+  })
+}

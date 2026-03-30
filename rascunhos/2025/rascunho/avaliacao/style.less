@@ -1,0 +1,130 @@
+/*
+ * CSS Template for markdown-preview-enhanced
+ * Mimics the appearance of the 20241_POO_Prova_Final.pdf file.
+ */
+
+.markdown-preview-enhanced.markdown-preview-enhanced {
+  // Use a wrapper class for specificity
+  &.prova-container {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 11pt;
+    line-height: 1.4;
+    background-color: #fff;
+    color: #000;
+    // Simulate A4 paper with margins
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 1.5cm 2cm;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  // Hide default markdown elements we're replacing
+  h1 {
+    display: none;
+  }
+
+  // Header styles
+  .prova-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1.5px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+
+    .logo img {
+      width: 100px;
+    }
+
+    .info table {
+      border-collapse: collapse;
+      font-size: 10pt;
+      td {
+        padding: 1px 4px;
+        &:first-child {
+          font-weight: bold;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  .prova-title {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+    border-bottom: 1.5px solid #000;
+    padding-bottom: 10px;
+  }
+
+  // Instructions styles
+  .orientacoes {
+    border: 1px solid #000;
+    padding: 10px 15px;
+    margin: 25px 0;
+    font-size: 9pt;
+
+    h2 {
+      text-align: center;
+      font-size: 1.1em;
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-weight: normal;
+    }
+
+    ol {
+      column-count: 2;
+      column-gap: 30px;
+      list-style-position: inside;
+      padding-left: 0;
+      margin: 0;
+    }
+  }
+
+  // Questions styles
+  .questoes {
+    column-count: 2;
+    column-gap: 30px;
+
+    .questao {
+      break-inside: avoid;
+      margin-bottom: 15px;
+
+      p {
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      ol {
+        list-style-type: lower-alpha;
+        padding-left: 20px;
+        margin: 0;
+        li {
+          margin-bottom: 4px;
+        }
+      }
+    }
+  }
+
+  // Footer styles
+  .prova-footer {
+    border-top: 1.5px solid #000;
+    padding-top: 8px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10pt;
+    width: 100%;
+  }
+}
+
+// Print-specific styles for PDF export
+@media print {
+  .markdown-preview-enhanced.markdown-preview-enhanced.prova-container {
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+  }
+}

@@ -1,0 +1,2 @@
+npm i -g @llamaindex/liteparse
+lit parse PPGTER.DES_.02.2019.UES_.pdf --format json -o ObjetoscomGreenfoot.md

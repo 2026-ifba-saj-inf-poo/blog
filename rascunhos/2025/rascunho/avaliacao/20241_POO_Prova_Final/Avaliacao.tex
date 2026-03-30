@@ -1,0 +1,612 @@
+\documentclass{exam}
+\usepackage{ModeloIFBA}
+%\usepackage[alf]{abntex2cite}
+\usepackage{multicol}
+\usepackage{adjustbox}
+\usepackage{multicol}
+
+\setlength\columnsep{30pt}
+
+
+\renewcommand{\curso}{Tecnologia em Análise e Desenvolvimento de Sistemas }
+\renewcommand{\materia}{Programação Orientada a Objetos}
+\renewcommand{\turma}{2024.1}
+\renewcommand{\professor}{Leandro Costa Souza}
+\renewcommand{\avaliacao}{Prova Final}
+\renewcommand{\dataavaliacao}{08/10/2024}
+
+
+\newcommand{\duracao}{1h 40min}
+\newcounter{solcount}
+\setcounter{solcount}{1}
+\newcommand\CC{%
+    \CorrectChoice\label{sol:\arabic{solcount}}
+    \stepcounter{solcount}
+}
+
+\newcommand\printmyanswers{%
+\section*{\centering Answers Sheet}
+    \foreach \x in {1,...,\thequestion}{%
+    \noindent
+        \x.~\ref{sol:\x}\par
+    }
+}
+
+\begin{document}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabularx}{\textwidth}{rrXrl}
+\multirow{5}{*}{\ifbalogo{1.7in}} & \textbf{Curso:} & \multicolumn{3}{l}{ \curso } \\ 
+& \textbf{Matéria:} & \materia \space & \textbf{Turma:} & \small{\turma}  \\ 
+& \textbf{Professor:} & \professor & & \\ 
+& \textbf{Aluno:} & \hrulefill & \textbf{Data:} & \dataavaliacao \\
+\end{tabularx}
+\end{adjustbox}
+\begin{tabularx}{\textwidth}{XcX}
+ & \textbf{\avaliacao} &  \\ \hline
+\end{tabularx}	
+	\input{orientacoes}
+
+
+	%\begin{center}
+	%	\gradetable[v][questions] 
+	%\end{center}
+	\begin{questions}
+\begin{multicols}{2}
+    \question[1] Qual método da classe Thread é usado para iniciar a execução de uma nova thread?
+\begin{choices}
+ \CC start()
+ \choice run()
+ \choice execute()
+ \choice begin()
+\end{choices}
+
+\question[1] Qual é a principal diferença entre a interface Runnable e a classe Thread?
+\begin{choices}
+ \choice Runnable é uma classe abstrata, enquanto Thread é uma interface.
+ \choice Runnable permite herança múltipla, enquanto Thread não.
+ \CC Runnable define um único método run(), enquanto Thread é uma classe completa que pode ser estendida.
+ \choice Thread define um único método run(), enquanto Runnable é uma classe completa que pode ser estendida.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre o uso de synchronized em métodos?
+\begin{choices}
+ \choice Ele permite que múltiplas threads acessem o método simultaneamente.
+ \choice Ele impede que existam múltiplas instancias do objeto para garantir uma única thread.
+ \choice Ele impede que qualquer thread acesse o método.
+ \CC Ele permite que apenas uma thread acesse o método por vez, mas não impede outras threads de acessar outros métodos da mesma classe.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre exceções verificadas em Java?
+\begin{choices}
+ \choice Elas são verificadas em tempo de execução.
+ \choice Elas não precisam ser declaradas ou tratadas.
+ \CC Elas são verificadas em tempo de compilação.
+ \choice Elas são subclasses de RuntimeException.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre exceções não verificadas em Java?
+\begin{choices}
+ \CC Elas são verificadas em tempo de execução.
+ \choice Elas são verificadas em tempo de compilação.
+ \choice Elas precisam ser declaradas ou tratadas.
+ \choice Elas são subclasses de Exception.
+\end{choices}
+
+\question[1] Qual palavra-chave é usada para definir que uma exceção personalizada pode ser lançada por um método em Java?
+\begin{choices}
+ \choice throws
+ \CC throw
+ \choice exception
+ \choice custom
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre o bloco finally em Java?
+\begin{choices}
+ \choice Ele é executado apenas se uma exceção for lançada.
+ \choice Ele é executado apenas se nenhuma exceção for lançada.
+ \CC Ele é executado sempre, independentemente de uma exceção ser lançada ou não.
+ \choice Ele não pode ser usado com blocos try-catch.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre a palavra-chave throw em Java?
+\begin{choices}
+ \choice Ela é usada para declarar uma exceção.
+ \CC Ela é usada para lançar uma exceção.
+ \choice Ela é usada para capturar uma exceção.
+ \choice Ela é usada para finalizar um bloco try-catch.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre a classe Throwable em Java?
+\begin{choices}
+ \choice Ela é a superclasse de todas as exceções verificadas.
+ \choice Ela é a superclasse de todas as exceções não verificadas.
+ \CC Ela é a superclasse de todas as exceções e erros.
+ \choice Ela não pode ser estendida por outras classes.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre a classe Exception em Java?
+\begin{choices}
+ \CC Ela é a superclasse de todas as exceções verificadas.
+ \choice Ela é a superclasse de todas as exceções não verificadas.
+ \choice Ela é a superclasse de todos os erros.
+ \choice Ela não pode ser estendida por outras classes.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre a comunicação entre camadas em uma arquitetura de três camadas?
+\begin{choices}
+ \choice A camada de apresentação se comunica diretamente com a camada de dados.
+ \choice A camada de serviço se comunica diretamente com a camada de apresentação.
+ \choice A camada de dados se comunica diretamente com a camada de apresentação.
+ \CC A camada de apresentação se comunica com a camada de serviço, que por sua vez se comunica com a camada de dados.
+\end{choices}
+
+\question[1] Qual das seguintes opções é uma vantagem da separação em camadas?
+\begin{choices}
+ \choice Aumenta a complexidade do código.
+ \choice Dificulta a manutenção do código.
+ \CC Facilita a manutenção e a escalabilidade do código.
+ \choice Reduz a modularidade do código.
+\end{choices}
+
+\question[1] Qual das seguintes opções é um exemplo de tecnologia comumente usada na camada de apresentação?
+\begin{choices}
+ \choice JDBC
+ \choice JPA
+ \choice Hibernate
+ \CC JavaFX
+\end{choices}
+
+\question[1] Qual palavra-chave é usada para herdar uma classe em Java?
+\begin{choices}
+ \choice inherits
+ \CC extends
+ \choice implements
+ \choice inheritsFrom
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre herança múltipla em Java?
+\begin{choices}
+ \choice Java suporta herança múltipla de classes.
+ \CC Java suporta herança múltipla de interfaces.
+ \choice Java não suporta herança múltipla de classes ou interfaces.
+ \choice Java suporta herança múltipla de classes e interfaces.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre o uso da palavra-chave super em Java?
+\begin{choices}
+ \choice Ela é usada para chamar o construtor da classe filha.
+ \choice Ela é usada para chamar métodos estáticos da classe pai.
+ \choice Ela é usada para chamar métodos privados da classe pai.
+ \CC Ela é usada para chamar o comportamento definido da classe pai.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre a classe Object em Java?
+\begin{choices}
+ \CC Ela é a superclasse de todas as classes em Java.
+ \choice Ela é a subclasse de todas as classes em Java.
+ \choice Ela não pode ser estendida por outras classes.
+ \choice Ela não pode ser instanciada.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre o uso de herança em Java?
+\begin{choices}
+ \choice Uma classe pode herdar de múltiplas classes.
+ \CC Uma classe pode herdar de apenas uma classe.
+ \choice Uma classe não pode herdar de outra classe.
+ \choice Uma classe pode herdar de múltiplas interfaces e classes.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre o uso de herança para reutilização de código?
+\begin{choices}
+ \choice Herança impede a reutilização de código.
+ \choice Herança não afeta a reutilização de código.
+ \choice Herança permite reutilizar código de uma classe filha em uma classe pai.
+ \CC Herança permite reutilizar código de uma classe pai em uma classe filha.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre classes abstratas?
+\begin{choices}
+ \choice Elas podem ser instanciadas diretamente.
+ \choice Elas não podem ter métodos concretos.
+ \CC Elas podem ter métodos abstratos e concretos.
+ \choice Elas não podem ter atributos.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre métodos abstratos em Java?
+\begin{choices}
+ \choice Eles podem ter uma implementação.
+ \CC Eles não podem ter uma implementação.
+ \choice Eles podem ser chamados diretamente.
+ \choice Eles não podem ser declarados em interfaces.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre herança de classes abstratas?
+\begin{choices}
+ \choice Uma classe abstrata não pode herdar de outra classe abstrata.
+ \choice Uma classe concreta não pode herdar de uma classe abstrata.
+ \choice Uma classe abstrata não pode ter subclasses.
+ \CC Uma classe abstrata pode herdar de outra classe abstrata.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre a implementação de métodos abstratos?
+\begin{choices}
+ \choice Eles devem ser implementados em uma classe abstrata.
+ \choice Eles não precisam ser implementados.
+ \choice Eles só podem ser implementados em interfaces.
+ \CC Eles devem ser implementados em uma classe concreta que herda a classe abstrata.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre a criação de instâncias de classes abstratas?
+\begin{choices}
+ \choice Classes abstratas podem ser instanciadas diretamente.
+ \CC Classes abstratas não podem ser instanciadas diretamente.
+ \choice Classes abstratas só podem ser instanciadas indiretamente através de interfaces.
+ \choice Classes abstratas só podem ser instanciadas se não tiverem métodos abstratos.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre o uso de construtores em classes abstratas?
+\begin{choices}
+ \CC Classes abstratas podem ter construtores.
+ \choice Classes abstratas não podem ter construtores.
+ \choice Construtores em classes abstratas devem ser abstratos.
+ \choice Construtores em classes abstratas não podem ser chamados.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre a visibilidade de métodos abstratos?
+\begin{choices}
+ \choice Métodos abstratos devem ser privados.
+ \choice Métodos abstratos devem ser protegidos.
+ \CC Métodos abstratos devem ser públicos ou protegidos.
+ \choice Métodos abstratos podem ter qualquer nível de visibilidade.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre a combinação de classes abstratas e interfaces?
+\begin{choices}
+ \choice Uma classe abstrata não pode implementar uma interface.
+ \choice Uma interface pode herdar de uma classe abstrata.
+ \choice Uma classe abstrata não pode ter métodos concretos se implementar uma interface.
+ \CC Uma classe abstrata pode implementar uma interface.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre a implementação de interfaces em classes?
+\begin{choices}
+ \CC Uma classe pode implementar múltiplas interfaces.
+ \choice Uma classe pode implementar apenas uma interface.
+ \choice Uma interface pode implementar outra interface.
+ \choice Uma interface pode herdar de uma classe.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre a herança de interfaces?
+\begin{choices}
+ \choice Uma interface não pode herdar de outra interface.
+ \choice Uma interface pode herdar de uma classe.
+ \CC Uma interface pode herdar de outra interface.
+ \choice Uma interface não pode herdar de uma classe.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre a visibilidade de métodos em interfaces?
+\begin{choices}
+ \choice Métodos em interfaces são privados por padrão.
+ \CC Métodos em interfaces são públicos por padrão.
+ \choice Métodos em interfaces são protegidos por padrão.
+ \choice Métodos em interfaces podem ter qualquer nível de visibilidade.
+\end{choices}
+
+\question[1] O que é polimorfismo em Java?
+\begin{choices}
+ \choice A capacidade de uma classe herdar de múltiplas classes.
+ \choice A capacidade de um método ter múltiplas implementações.
+ \CC A capacidade de uma variável referenciar objetos de diferentes tipos.
+ \choice A capacidade de uma classe ter múltiplos métodos com o mesmo nome.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre a sobrescrita de métodos em Java?
+\begin{choices}
+ \choice Ela permite que uma classe filha herde múltiplos métodos com o mesmo nome de sua classe pai.
+ \choice Ela permite que uma classe filha tenha múltiplos métodos com o mesmo nome, mas com diferentes assinaturas.
+ \choice Ela permite que uma classe filha herde métodos estáticos de sua classe pai.
+ \CC Ela permite que uma classe filha forneça uma implementação específica de um método que já está definido em sua classe pai.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre a sobrecarga de métodos em Java?
+\begin{choices}
+ \CC Ela permite que uma classe tenha múltiplos métodos com o mesmo nome, mas com diferentes assinaturas.
+ \choice Ela permite que uma classe tenha múltiplos métodos com o mesmo nome e a mesma assinatura.
+ \choice Ela permite que uma classe herde métodos com o mesmo nome de sua classe pai.
+ \choice Ela permite que uma classe tenha métodos estáticos com o mesmo nome.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre o uso de polimorfismo com interfaces?
+\begin{choices}
+ \choice Uma variável de tipo interface pode referenciar apenas objetos de classes abstratas.
+ \choice Uma variável de tipo interface não pode referenciar objetos de classes concretas.
+ \CC Uma variável de tipo interface pode referenciar qualquer objeto que implemente essa interface.
+ \choice Uma variável de tipo interface pode referenciar apenas objetos de uma única classe.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre o uso de polimorfismo com classes abstratas?
+\begin{choices}
+ \CC Uma variável de tipo classe abstrata pode referenciar qualquer objeto de uma classe concreta que estenda essa classe abstrata.
+ \choice Uma variável de tipo classe abstrata pode referenciar apenas objetos de outras classes abstratas.
+ \choice Uma variável de tipo classe abstrata não pode referenciar objetos de classes concretas.
+ \choice Uma variável de tipo classe abstrata pode referenciar apenas objetos de uma única classe concreta.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre o uso de polimorfismo com métodos estáticos?
+\begin{choices}
+ \choice Métodos estáticos podem ser sobrescritos para suportar polimorfismo.
+ \CC Métodos estáticos não podem ser sobrescritos e não suportam polimorfismo.
+ \choice Métodos estáticos podem ser sobrecarregados para suportar polimorfismo.
+ \choice Métodos estáticos podem ser herdados para suportar polimorfismo.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre classes em Java?
+\begin{choices}
+ \choice Elas são instâncias de objetos.
+ \CC Elas são modelos para criar objetos.
+ \choice Elas não podem ter métodos.
+ \choice Elas não podem ter atributos.
+\end{choices}
+
+\question[1] Qual das seguintes opções é verdadeira sobre o uso de modificadores de acesso em classes?
+\begin{choices}
+ \choice Classes podem ser públicas, privadas ou protegidas.
+ \choice Classes podem ser públicas ou protegidas, mas não privadas.
+ \choice Classes podem ser públicas ou privadas, mas não protegidas.
+ \CC Classes podem ser públicas ou ter visibilidade de pacote (default).
+\end{choices}
+
+\question[2] Qual das seguintes opções é verdadeira sobre objetos em Java?
+\begin{choices}
+ \choice Eles são modelos para criar classes.
+ \CC Eles são instâncias de classes.
+ \choice Eles não podem ter métodos.
+ \choice Eles não podem ter atributos.
+\end{choices}
+
+\question[2] Qual método da classe Object é usado para comparar dois objetos para igualdade?
+\begin{choices}
+ \choice compareTo()
+ \choice hashCode()
+ \CC equals()
+ \choice toString()
+\end{choices}
+
+\question[2] Qual das seguintes opções é verdadeira sobre o uso de métodos estáticos em objetos?
+\begin{choices}
+ \CC Métodos estáticos podem ser chamados sem criar uma instância do objeto.
+ \choice Métodos estáticos não podem ser chamados sem criar uma instância do objeto.
+ \choice Métodos estáticos podem acessar atributos de instância diretamente.
+ \choice Métodos estáticos não podem acessar outros métodos estáticos.
+\end{choices}
+
+\question[2] Qual das seguintes opções é verdadeira sobre o uso de métodos finais em objetos?
+\begin{choices}
+ \choice Métodos finais podem ser sobrescritos.
+ \CC Métodos finais não podem ser sobrescritos.
+ \choice Métodos finais não podem ser chamados diretamente.
+ \choice Métodos finais não podem ser estáticos.
+\end{choices}
+
+\question[2] Qual palavra-chave é usada para declarar um atributo ou método de classe em Java?
+\begin{choices}
+ \CC static
+ \choice final
+ \choice const
+ \choice global
+\end{choices}
+
+\question[2] Qual das seguintes opções é verdadeira sobre métodos estáticos?
+\begin{choices}
+ \choice Eles podem acessar atributos de instância diretamente.
+ \choice Eles podem ser sobrescritos.
+ \CC Eles podem ser chamados sem criar uma instância da classe.
+ \choice Eles não podem acessar outros métodos estáticos.
+\end{choices}
+
+\question[2] Qual das seguintes opções é verdadeira sobre atributos estáticos?
+\begin{choices}
+ \CC Eles são compartilhados por todas as instâncias da classe.
+ \choice Eles são únicos para cada instância da classe.
+ \choice Eles não podem ser modificados após a inicialização.
+ \choice Eles não podem ser acessados diretamente.
+\end{choices}
+
+\question[2] Qual das seguintes opções é verdadeira sobre o uso de blocos estáticos em Java?
+\begin{choices}
+ \choice Blocos estáticos são executados quando uma instância da classe é criada.
+ \choice Blocos estáticos não podem acessar atributos estáticos.
+ \choice Blocos estáticos não podem acessar métodos estáticos.
+ \CC Blocos estáticos são executados quando a classe é carregada pela primeira vez.
+\end{choices}
+
+\question[2] Qual das seguintes opções é verdadeira sobre o uso de métodos estáticos em subclasses?
+\begin{choices}
+ \CC Métodos estáticos não podem ser sobrescritos em subclasses.
+ \choice Métodos estáticos podem ser sobrescritos em subclasses.
+ \choice Métodos estáticos podem acessar atributos de instância diretamente.
+ \choice Métodos estáticos não podem ser chamados diretamente.
+\end{choices}
+
+\question[2] Qual das seguintes opções é verdadeira sobre o uso de métodos estáticos privados?
+\begin{choices}
+ \choice Métodos estáticos privados podem ser chamados fora da classe.
+ \CC Métodos estáticos privados não podem ser chamados fora da classe.
+ \choice Métodos estáticos privados podem acessar atributos de instância diretamente.
+ \choice Métodos estáticos privados não podem acessar outros métodos estáticos.
+\end{choices}
+
+\question[2] Qual das seguintes opções melhor descreve uma associação em Java?
+\begin{choices}
+ \choice Uma relação 'parte-todo' onde a parte não pode existir sem o todo.
+ \choice Uma relação 'parte-todo' onde a parte pode existir independentemente do todo.
+ \CC Uma relação entre duas classes onde uma classe contém uma referência a outra.
+ \choice Uma relação entre duas classes onde uma classe herda da outra.
+\end{choices}
+
+\question[2] Qual das seguintes opções melhor descreve uma composição em Java?
+\begin{choices}
+ \CC Uma relação 'parte-todo' onde a parte não pode existir sem o todo.
+ \choice Uma relação 'parte-todo' onde a parte pode existir independentemente do todo.
+ \choice Uma relação entre duas classes onde uma classe contém uma referência a outra.
+ \choice Uma relação entre duas classes onde uma classe herda da outra.
+\end{choices}
+
+\question[2] Qual das seguintes opções melhor descreve uma agregação em Java?
+\begin{choices}
+ \choice Uma relação 'parte-todo' onde a parte não pode existir sem o todo.
+ \CC Uma relação 'parte-todo' onde a parte pode existir independentemente do todo.
+ \choice Uma relação entre duas classes onde uma classe contém uma referência a outra.
+ \choice Uma relação entre duas classes onde uma classe herda da outra.
+\end{choices}
+
+\question[2] Qual das seguintes opções é verdadeira sobre a diferença entre composição e agregação?
+\begin{choices}
+ \choice Na composição, a parte pode existir independentemente do todo.
+ \choice Na agregação, a parte não pode existir sem o todo.
+ \CC Na composição, a parte não pode existir sem o todo.
+ \choice Na agregação, a parte é sempre uma instância da classe pai.
+\end{choices}
+
+\question[2] Qual das seguintes opções é verdadeira sobre a implementação de composição em Java?
+\begin{choices}
+ \CC A classe composta contém uma referência à classe componente e controla seu ciclo de vida.
+ \choice A classe composta contém uma referência à classe componente, mas não controla seu ciclo de vida.
+ \choice A classe componente contém uma referência à classe composta e controla seu ciclo de vida.
+ \choice A classe componente contém uma referência à classe composta, mas não controla seu ciclo de vida.
+\end{choices}
+
+\question[2] Qual das seguintes opções é verdadeira sobre a implementação de agregação em Java?
+\begin{choices}
+ \choice A classe agregada contém uma referência à classe agregadora e controla seu ciclo de vida.
+ \choice A classe agregada contém uma referência à classe agregadora, mas não controla seu ciclo de vida.
+ \choice A classe agregadora contém uma referência à classe agregada e controla seu ciclo de vida.
+ \CC A classe agregadora contém uma referência à classe agregada, mas não controla seu ciclo de vida.
+\end{choices}
+
+\question[2] O que é encapsulamento em Java?
+\begin{choices}
+ \choice A capacidade de uma classe herdar de múltiplas classes.
+ \CC A capacidade de uma classe ocultar seus detalhes de implementação.
+ \choice A capacidade de uma classe ter múltiplos métodos com o mesmo nome.
+ \choice A capacidade de uma classe ter atributos e métodos estáticos.
+\end{choices}
+
+\question[2] Qual das seguintes opções é uma prática comum para implementar encapsulamento?
+\begin{choices}
+ \choice Tornar todos os atributos públicos.
+ \choice Tornar todos os métodos privados.
+ \choice Usar herança para acessar atributos privados.
+ \CC Usar métodos getter e setter para acessar atributos privados.
+\end{choices}
+
+\question[2] Qual das seguintes opções é verdadeira sobre o uso de métodos getter e setter?
+\begin{choices}
+ \choice Eles permitem acesso direto aos atributos privados.
+ \choice Eles não podem ser usados para acessar atributos privados.
+ \CC Eles permitem acesso controlado aos atributos privados.
+ \choice Eles são usados apenas para métodos estáticos.
+\end{choices}
+
+\question[2] Qual das seguintes opções é verdadeira sobre o uso de construtores privados?
+\begin{choices}
+ \CC Construtores privados impedem a criação de instâncias fora da classe.
+ \choice Construtores privados permitem a criação de instâncias fora da classe.
+ \choice Construtores privados não podem ser usados em classes abstratas.
+ \choice Construtores privados são usados apenas em interfaces.
+\end{choices}
+
+\question[2] Qual das seguintes opções é verdadeira sobre o uso de atributos privados?
+\begin{choices}
+ \choice Atributos privados podem ser acessados diretamente fora da classe.
+ \choice Atributos privados não podem ser usados em métodos estáticos.
+ \choice Atributos privados são usados apenas em interfaces.
+ \CC Atributos privados não podem ser acessados diretamente fora da classe.
+\end{choices}
+
+\question[2] Qual das seguintes opções é verdadeira sobre o uso de métodos privados?
+\begin{choices}
+ \choice Métodos privados podem ser chamados diretamente fora da classe.
+ \CC Métodos privados não podem ser chamados diretamente fora da classe.
+ \choice Métodos privados não podem ser usados em classes abstratas.
+ \choice Métodos privados são usados apenas em interfaces.
+\end{choices}
+
+\question[2] Qual das seguintes opções é verdadeira sobre o uso de pacotes para encapsulamento?
+\begin{choices}
+ \choice Pacotes não permitem a organização de classes relacionadas.
+ \choice Pacotes podem ter atributos privados.
+ \CC Pacotes permitem a organização de classes relacionadas.
+ \choice Pacotes podem ter métodos privados.
+\end{choices}
+
+\question[2] Qual das seguintes opções é verdadeira sobre o uso de modificadores de acesso para encapsulamento?
+\begin{choices}
+ \choice Modificadores de acesso não permitem controlar a visibilidade de atributos e métodos.
+ \CC Modificadores de acesso permitem controlar a visibilidade de atributos e métodos.
+ \choice Modificadores de acesso podem ser usados apenas em interfaces.
+ \choice Modificadores de acesso podem ser usados apenas em classes abstratas.
+\end{choices}
+
+\question[2] Qual modificador de acesso permite que um atributo ou método seja acessado dentro do mesmo pacote e por subclasses?
+\begin{choices}
+ \choice public
+ \choice private
+ \choice default
+ \CC protected
+\end{choices}
+
+\question[2] Qual modificador de acesso permite que um atributo ou método seja acessado apenas dentro do mesmo pacote?
+\begin{choices}
+ \choice public
+ \choice protected
+ \choice private
+ \CC default
+\end{choices}
+
+\question[2] Qual das seguintes opções é verdadeira sobre o uso da palavra-chave import em Java?
+\begin{choices}
+ \CC Ela é usada para importar pacotes e classes.
+ \choice Ela é usada para declarar pacotes.
+ \choice Ela é usada para definir a visibilidade de métodos.
+ \choice Ela é usada para criar herança múltipla.
+\end{choices}
+
+\question[2] Qual das seguintes opções é verdadeira sobre a estrutura de diretórios de pacotes em Java?
+\begin{choices}
+ \choice A estrutura de diretórios não precisa corresponder à estrutura de pacotes.
+ \choice A estrutura de diretórios deve ser plana.
+ \choice A estrutura de diretórios deve ser única para cada classe.
+ \CC A estrutura de diretórios deve corresponder à estrutura de pacotes.
+\end{choices}
+
+\question[2] Qual das seguintes opções é verdadeira sobre o uso de pacotes padrão (default package) em Java?
+\begin{choices}
+ \choice Classes no pacote padrão podem ser acessadas de qualquer pacote.
+ \CC Classes no pacote padrão só podem ser acessadas dentro do mesmo pacote.
+ \choice Classes no pacote padrão não podem ser importadas.
+ \choice Classes no pacote padrão podem ser públicas ou privadas.
+\end{choices}
+
+\question[2] Qual das seguintes opções é verdadeira sobre o uso de pacotes para modularização?
+\begin{choices}
+ \CC Pacotes permitem a modularização do código.
+ \choice Pacotes impedem a modularização do código.
+ \choice Pacotes não afetam a modularização do código.
+ \choice Pacotes são usados apenas para definir a visibilidade de métodos.
+\end{choices}
+
+\question[2] Qual das seguintes opções é verdadeira sobre o uso de pacotes para evitar conflitos de nomes?
+\begin{choices}
+ \choice Pacotes não ajudam a evitar conflitos de nomes entre classes.
+ \choice Pacotes são usados apenas para definir a visibilidade de métodos.
+ \CC Pacotes ajudam a evitar conflitos de nomes entre classes.
+ \choice Pacotes são usados apenas para agrupar classes relacionadas.
+\end{choices}
+
+
+\end{multicols}        
+     \end{questions}	
+\printmyanswers
+\end{document}
+
