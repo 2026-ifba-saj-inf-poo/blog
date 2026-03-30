@@ -1,5 +1,6 @@
 ---
 icon: pen-to-square
+title: Exemplos de Uso
 date: 2022-01-12
 category:
   - Vegetable
@@ -8,9 +9,9 @@ tag:
   - round
 ---
 
-# Exemplos de Uso
+## Exemplos de Uso de tabelas e diagramas
 
-## Tabelas
+### Tabelas
 
 |         | Homem        | Cão              | Mosca           |
 | ------- | ------------ | ---------------- | --------------- |
@@ -24,9 +25,9 @@ tag:
 
 :Tabela de taxonomia de Linnaeus para classificação de Homem, Cão e Mosca
 
-## Figuras
+### Figuras
 
-### modo 1
+#### modo 1
 <figure>
 
 ```plantuml
@@ -41,7 +42,7 @@ f1 -> n1 : compilação
 </figure>
 
 
-### modo 2
+#### modo 2
 
 ::: figure Representação do processo de compilação.
 
@@ -57,6 +58,6 @@ f1 -> n1 : compilação
 
 
 
-### Heading 3
+#### Heading 3
 
 Here is the content.

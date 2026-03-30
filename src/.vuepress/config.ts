@@ -20,14 +20,23 @@ export default defineUserConfig({
     md.use(table_captions)
     md.use(container, 'figure', {
       render: (tokens, idx) => {
+        // Procura o texto da legenda (ex: ::: figure Minha Legenda)
         const m = tokens[idx].info.trim().match(/^figure\s*(.*)$/);
+
         if (tokens[idx].nesting === 1) {
-          // Abre a tag <figure> e, se houver legenda, já prepara o <figcaption>
-          const caption = m[1] ? `<figcaption>${md.utils.escapeHtml(m[1])}</figcaption>` : '';
-          return `<figure>\n${caption}\n`;
+          // Abre apenas o <figure> na parte de cima
+          return '<figure>\n';
         } else {
-          // Fecha a tag </figure>
-          return '</figure>\n';
+          // No fecho (nesting === -1), recuperamos o texto e fechamos a tag
+          // Nota: Precisamos de aceder ao token de abertura para ler o texto original
+          const openToken = tokens.slice(0, idx).reverse().find(t => t.type === 'container_figure_open');
+          const captionText = openToken.info.trim().match(/^figure\s*(.*)$/)?.[1];
+
+          const figcaption = captionText
+            ? `<figcaption>${md.utils.escapeHtml(captionText)}</figcaption>`
+            : '';
+
+          return `${figcaption}\n</figure>\n`;
         }
       }
     })
@@ -36,5 +45,5 @@ export default defineUserConfig({
   theme,
 
   // Enable it with pwa
-  shouldPrefetch: false,
+  shouldPrefetch: true,
 });

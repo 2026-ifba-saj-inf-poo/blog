@@ -37,4 +37,9 @@ export default navbar([
     icon: "clock",
     link: "/timeline/",
   },
+  {
+    text: "Imprimir",
+    icon: "print",
+    link: "imprimir",
+  }
 ]);
