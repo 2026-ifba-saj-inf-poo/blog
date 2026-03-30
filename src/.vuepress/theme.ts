@@ -13,7 +13,7 @@ export default hopeTheme({
 
   logo: "/logo.svg",
 
-  repo: "20261-ifba-saj-ads-poo/blog",
+  repo: "2026-ifba-saj-inf-poo/blog",
 
   docsDir: "src",
 
