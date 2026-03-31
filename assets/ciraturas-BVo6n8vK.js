@@ -1,0 +1,1 @@
+var e=`/blog/assets/ciraturas-2wCPshxW.png`;export{e as t};

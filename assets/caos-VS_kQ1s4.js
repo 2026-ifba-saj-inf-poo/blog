@@ -1,0 +1,1 @@
+var e=`/blog/assets/caos-Zz4DzzhG.png`;export{e as t};

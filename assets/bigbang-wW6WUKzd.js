@@ -1,0 +1,1 @@
+var e=`/blog/assets/molde-5GeT5Pto.png`,t=`/blog/assets/bigbang-DOPnKLjb.png`;export{e as n,t};
