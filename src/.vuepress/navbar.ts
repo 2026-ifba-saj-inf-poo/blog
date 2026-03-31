@@ -3,19 +3,9 @@ import { navbar } from "vuepress-theme-hope";
 export default navbar([
   "/",
   {
-    text: "Publicações",
+    text: "Aulas",
     icon: "edit",
-    link: "/article/",
-  },
-  {
-    text: "Categoria",
-    icon: "list",
-    link: "/category/",
-  },
-  {
-    text: "Tag",
-    icon: "tag",
-    link: "/tag/",
+    link: "/category/aula/",
   },
   {
     text: "Exercícios",
@@ -31,6 +21,16 @@ export default navbar([
     text: "Para Entrega",
     icon: "paper-plane",
     link: "/category/entrega/",
+  },
+  {
+    text: "Categoria",
+    icon: "list",
+    link: "/category/",
+  },
+  {
+    text: "Tag",
+    icon: "tag",
+    link: "/tag/",
   },
   {
     text: "Timeline",

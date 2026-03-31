@@ -59,7 +59,7 @@ export default hopeTheme({
     imgSize: true,
     include: true,
     mark: true,
-    plantuml: false,
+    plantuml: true,
     spoiler: true,
     stylize: [
       {

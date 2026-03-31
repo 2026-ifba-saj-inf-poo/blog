@@ -7,6 +7,10 @@ index: false
 
 # Versão para Impressão
 
-<!-- @include: ./01_objeto_classe.md -->
+<!-- @include: ./01_paradigmas.md -->
+
+<!-- @include: ./02_classes.md -->
+
+<!-- @include: ./03_objetos.md -->
 
 <!-- @include: ../../includes/bib.md -->
