@@ -1,8 +1,6 @@
 ---
-article: false
-index: false
 icon: book
-date: 2026-03-10 7:30:00.00 -3
+date: 2026-04-07 7:30:00.00 -3
 title: "Associações: Agregação e Composição"
 tag:
   - java
@@ -65,7 +63,7 @@ Para decidir entre agregação e composição, faça esta pergunta:
 > _Se o todo for destruído, a parte ainda faz sentido sozinha?_
 
 - **Sim** → Agregação (🎒 item de inventário)
-- **Não** → Composição (🫀 órgão vital)
+- **Não** → Composição (🧩 órgão vital)
 
 ## 🌌 A Gênese
 
@@ -339,7 +337,7 @@ class Produto {
     + String toString()
 }
 
-Carrinho *--> ItemCompra : 🫀 composição
+Carrinho *--> ItemCompra : 🧩 composição
 ItemCompra o--> Produto : 🎒 agregação
 @enduml
 ```
@@ -390,7 +388,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Carrinho {
-    List<ItemCompra> itens; // 🫀 Composição: os itens são CRIADOS aqui
+    List<ItemCompra> itens; // 🧩 Composição: os itens são CRIADOS aqui
 
     Carrinho() {
         this.itens = new ArrayList<>(); // O carrinho cria sua própria lista
@@ -478,7 +476,7 @@ rectangle "🎒 Agregação" as ag #lightyellow {
     end note
 }
 
-rectangle "🫀 Composição" as comp #lightgreen {
+rectangle "🧩 Composição" as comp #lightgreen {
     map "Guerreiro" as g2 {
         nome => "Arthas"
     }
@@ -496,7 +494,7 @@ rectangle "🫀 Composição" as comp #lightgreen {
 
 :::
 
-| Critério                | 🎒 Agregação            | 🫀 Composição            |
+| Critério                | 🎒 Agregação            | 🧩 Composição            |
 | ----------------------- | ----------------------- | ------------------------ |
 | A parte existe sozinha? | **Sim**                 | **Não**                  |
 | Quem cria a parte?      | **Classe externa**      | **O próprio todo**       |
@@ -505,10 +503,10 @@ rectangle "🫀 Composição" as comp #lightgreen {
 | UML                     | Losango vazio (`◇`)     | Losango preenchido (`◆`) |
 | Metáfora                | Item no inventário      | Órgão no corpo           |
 
+<!-- 
 ## 🔨 O Desafio do Criador
 
 - [Desafio 04 - Associações, Agregação e Composição](../desafios/04_associacoes.md)
 
 ## Referências
-
-<!-- @include: ../../includes/bib.md -->
+ -->

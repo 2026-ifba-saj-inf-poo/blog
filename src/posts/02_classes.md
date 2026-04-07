@@ -522,10 +522,7 @@ public class Criatura {
 
     // Ritual simplificado — criatura nasce com valores padrão
     Criatura(String nome) {
-        this.nome = nome;
-        this.vida = 100;   // vida padrão
-        this.tipo = "Desconhecido";
-        this.forca = 10;   // força padrão
+        this(nome,100,"Desconhecido",10);
     }
 
     // ... métodos ...

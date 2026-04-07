@@ -114,10 +114,10 @@ skinparam classBackgroundColor #98FB98
 skinparam classBorderColor SeaGreen
 
 class Criatura {
-    __ Essência (Dados) __
+    __ Essência (Dados-TEM) __
     nome
     vida
-    == Poderes (Métodos) ==
+    == Poderes (Métodos-FAZ) ==
     receberDano()
     exibirStatus()
 }
