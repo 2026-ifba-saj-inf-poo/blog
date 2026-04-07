@@ -198,13 +198,13 @@ public class Universo {
         // O carro recebe o motor por parâmetro
         Carro fusca = new Carro("Azul", "VW", motorV8);
 
-        IO.println(fusca); // VW Azul | Vel: 0 | Motor 400cv | Rotações: 0
+        System.out.println(fusca); // VW Azul | Vel: 0 | Motor 400cv | Rotações: 0
 
         fusca.acelerar();
-        IO.println(fusca); // VW Azul | Vel: 200 | Motor 400cv | Rotações: 500
+        System.out.println(fusca); // VW Azul | Vel: 200 | Motor 400cv | Rotações: 500
 
         fusca.acelerar();
-        IO.println(fusca); // VW Azul | Vel: 600 | Motor 400cv | Rotações: 1000
+        System.out.println(fusca); // VW Azul | Vel: 600 | Motor 400cv | Rotações: 1000
     }
 }
 ```
@@ -290,8 +290,8 @@ public class Universo {
         Produto tv = new Produto("Smart TV 55\"", 2500.0, samsung);
         Produto celular = new Produto("Galaxy S24", 4200.0, samsung);
 
-        IO.println(tv);
-        IO.println(celular);
+        System.out.println(tv);
+        System.out.println(celular);
 
         // Se o produto "tv" fosse destruído, samsung continua vivo!
     }
@@ -434,7 +434,7 @@ public class Universo {
         carrinho.adicionarProduto(feijao, 3);
         carrinho.adicionarProduto(leite, 6);
 
-        IO.println(carrinho);
+        System.out.println(carrinho);
         // 🛒 Carrinho de Compras:
         //   - 2x Arroz 5kg = R$51.8
         //   - 3x Feijão 1kg = R$25.5
@@ -451,7 +451,7 @@ public class Universo {
 
 - **Composição:** o `Carrinho` **cria** o `ItemCompra` dentro de `adicionarProduto()` — o item nasce dentro do carrinho e morre com ele.
 - **Agregação:** o `ItemCompra` **recebe** o `Produto` por parâmetro — o produto existe antes e depois do item.
-  :::
+:::
 
 ### Resumo visual: Agregação vs Composição
 
