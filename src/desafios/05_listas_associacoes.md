@@ -1,6 +1,4 @@
 ---
-article: false
-index: false
 title: "Desafio 05 - Listas nas Associações: Modelando 1:N e N:N"
 date: 2026-04-14 13:30:00.00 -3
 category:
