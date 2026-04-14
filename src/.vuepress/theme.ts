@@ -121,7 +121,8 @@ export default hopeTheme({
     blog: {
       excerpt: false
     },
-    slimsearch : true,
+    search : true,
+    //slimsearch : true,
 
     // Install @waline/client before enabling it
     // Note: This is for testing ONLY!

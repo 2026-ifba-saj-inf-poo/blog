@@ -88,9 +88,13 @@ class Categoria {
   + adicionarLivro(Livro livro)
 }
 Turma --> "0..*" Aluno : alunos
+Aluno --> "0..*" Turma : turmas
 Turma --> "0..*" Professor : professores
+Professor --> "0..*" Turma : turmas
 Livro --> Autor : autor
+Autor --> "0..*" Livro : livros
 Livro --> "0..*" Categoria : categorias
+Categoria --> "0..*" Livro : livros
 @enduml
 ```
 
@@ -162,10 +166,18 @@ class Turma {
 class Aluno {
     String nome;
     String matricula;
+    List<Turma> turmas;
 
     Aluno(String matricula, String nome) {
         this.nome = nome;
         this.matricula = matricula;
+        this.turmas = new ArrayList<>();
+    }
+
+    void adicionarTurma(Turma turma) {
+        if (!turmas.contains(turma)) {
+            turmas.add(turma);
+        }
     }
 
     public boolean equals(Object obj) {
@@ -254,11 +266,12 @@ Outro domínio rico em listas é a biblioteca digital do exercício. Um livro po
 class Livro {
     String titulo;
     Autor autor;
-    List<Categoria> categorias = new ArrayList<>();
+    List<Categoria> categorias;
 
-    Livro(String titulo, Autor autor) {
+    Livro(String titulo, Autor autor, List<Categoria> categorias) {
         this.titulo = titulo;
         this.autor = autor;
+        this.categorias = categorias;
     }
 
     void adicionarCategoria(Categoria categoria) {
@@ -320,7 +333,6 @@ Uma associação com lista deixa o seu modelo mais fiel ao mundo real e mais pre
 
 - `List` serve para representar associações 1:N e N:N
 - Use `ArrayList` internamente para armazenar os objetos
-- Exponha `List<T>` nos métodos públicos
 - Implemente `equals()` quando usar `contains()` em listas de objetos
 - Use laços e `forEach` para percorrer as relações associadas
 
