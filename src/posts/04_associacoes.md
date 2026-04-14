@@ -34,7 +34,7 @@ Existem três tipos principais de associação em POO:
 | -------------- | ----------- | ----------------------------- | ---------------------- |
 | **Associação** | `→`         | Relação genérica              | 🔗 Elo entre criaturas |
 | **Agregação**  | `◇→`        | A parte **existe** sem o todo | 🎒 Itens de Inventário |
-| **Composição** | `◆→`        | A parte **morre** com o todo  | 🫀 Órgãos Vitais       |
+| **Composição** | `◆→`        | A parte **morre** com o todo  | 🧩 Órgãos Vitais       |
 
 ### Agregação: as partes existem sozinhas
 
@@ -95,7 +95,7 @@ Vamos começar com o exemplo mais clássico: um carro que possui um motor.
 
 ```plantuml
 @startuml
-skinparam backgroundColor transparent
+
 skinparam defaultFontSize 13
 
 class Carro {
@@ -219,7 +219,7 @@ Na agregação, a relação é mais explícita: a parte existe antes e depois do
 
 ```plantuml
 @startuml
-skinparam backgroundColor transparent
+
 skinparam defaultFontSize 13
 
 class Produto {
@@ -310,7 +310,7 @@ Na composição, a parte só existe dentro do todo. Ela é **criada** pelo todo.
 
 ```plantuml
 @startuml
-skinparam backgroundColor transparent
+
 skinparam defaultFontSize 13
 
 class Carrinho {
@@ -459,7 +459,7 @@ public class Universo {
 
 ```plantuml
 @startuml
-skinparam backgroundColor transparent
+
 skinparam defaultFontSize 14
 
 rectangle "🎒 Agregação" as ag #lightyellow {

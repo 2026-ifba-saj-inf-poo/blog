@@ -63,7 +63,7 @@ Na programação estruturada, é mais ou menos assim: você tem **dados** de um 
 
 ```plantuml
 @startuml
-skinparam backgroundColor transparent
+
 skinparam defaultFontSize 14
 
 node "DADOS\n(soltos, expostos, sem proteção)" as dados #FFA07A;line:OrangeRed;text:OrangeRed
@@ -108,7 +108,7 @@ Agora imagine que um **Deus Criador** resolve colocar ordem no caos. Ele decide:
 
 ```plantuml
 @startuml
-skinparam backgroundColor transparent
+
 skinparam defaultFontSize 14
 skinparam classBackgroundColor #98FB98
 skinparam classBorderColor SeaGreen
@@ -250,7 +250,7 @@ public class Universo {
 
 ```plantuml
 @startuml
-skinparam backgroundColor transparent
+
 skinparam defaultFontSize 13
 
 package "Paradigma Estruturado" {

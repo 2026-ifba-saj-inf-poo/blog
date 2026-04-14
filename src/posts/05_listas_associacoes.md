@@ -30,17 +30,17 @@ Quando uma classe está associada a outra através de um `List`, dizemos que ela
 Em Java, isso se modela escrevendo um atributo com tipo de coleção:
 
 ```java
-private List<Aluno> alunos;
-private List<Livro> livros;
-private List<Categoria> categorias;
+List<Aluno> alunos;
+List<Livro> livros;
+List<Categoria> categorias;
 ```
 
 Mas isso ainda não cria a lista em si. Para criar a lista, é preciso instanciar um objeto de `ArrayList`:
 
 ```java
-private List<Aluno> alunos = new ArrayList<>();
-private List<Livro> livros = new ArrayList<>();
-private List<Categoria> categorias = new ArrayList<>();
+List<Aluno> alunos = new ArrayList<>();
+List<Livro> livros = new ArrayList<>();
+List<Categoria> categorias = new ArrayList<>();
 ```
 
 - `List<Aluno>` declara o tipo da lista.
@@ -60,22 +60,32 @@ class Turma {
 }
 class Aluno {
   - String nome
+  - List<Turma> turmas
   - String matricula
 }
 class Professor {
   - String nome
+  - List<Turma> turmas
   - String especialidade
 }
 class Livro {
   - String titulo
   - Autor autor
   - List<Categoria> categorias
+  Livro(String titulo, Autor autor, List<Categoria> categorias)
 }
 class Autor {
   - String nome
+  - List<Livro> livros
+  Autor(String nome)
+  + adicionarLivro(Livro livro)
+
 }
 class Categoria {
+  - List<Livro> livros
   - String nome
+    Categoria(String nome)
+  + adicionarLivro(Livro livro)
 }
 Turma --> "0..*" Aluno : alunos
 Turma --> "0..*" Professor : professores
@@ -100,7 +110,6 @@ Livro --> "0..*" Categoria : categorias
 
 ## 🧠 Associações 1:N com listas
 
-O exemplo do arquivo `08_ArrayList` mostra um domínio bancário:
 
 - `Cliente` possui `List<Conta>`
 - `Agencia` possui `List<Conta>`
@@ -116,79 +125,102 @@ Baseado no exercício de modelagem de listas, vamos ver como uma escola pode usa
 import java.util.ArrayList;
 import java.util.List;
 
-public class Turma {
-    private String nome;
-    private List<Aluno> alunos = new ArrayList<>();
-    private List<Professor> professores = new ArrayList<>();
+class Turma {
+    String nome;
+    List<Aluno> alunos;
+    List<Professor> professores;
 
-    public Turma(String nome) {
+    Turma(String nome) {
         this.nome = nome;
+        this.alunos = new ArrayList<>();
+        this.professores = new ArrayList<>();
     }
 
-    public void adicionarAluno(Aluno aluno) {
+    void adicionarAluno(Aluno aluno) {
         if (!alunos.contains(aluno)) {
             alunos.add(aluno);
         }
     }
 
-    public void adicionarProfessor(Professor professor) {
+    void adicionarProfessor(Professor professor) {
         if (!professores.contains(professor)) {
             professores.add(professor);
         }
     }
 
-    public List<Aluno> getAlunos() {
+    List<Aluno> getAlunos() {
         return alunos;
     }
 
-    public List<Professor> getProfessores() {
+    List<Professor> getProfessores() {
         return professores;
     }
 }
 ```
 
 ```java
-public class Aluno {
-    private String nome;
-    private String matricula;
+class Aluno {
+    String nome;
+    String matricula;
 
-    public Aluno(String matricula, String nome) {
+    Aluno(String matricula, String nome) {
         this.nome = nome;
         this.matricula = matricula;
     }
 
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Aluno)) return false;
+        Aluno outro = (Aluno) obj;
+        return this.matricula.equals(outro.matricula);
+    }
+
     @Override
-    public String toString() {
+    String toString() {
         return nome + " (" + matricula + ")";
     }
 }
 
-public class Professor {
-    private String nome;
-    private String especialidade;
+class Professor {
+    String nome;
+    String especialidade;
 
-    public Professor(String nome, String especialidade) {
+    Professor(String nome, String especialidade) {
         this.nome = nome;
         this.especialidade = especialidade;
     }
 
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Professor)) return false;
+        Professor outro = (Professor) obj;
+        return this.nome.equals(outro.nome) && this.especialidade.equals(outro.especialidade);
+    }
+
     @Override
-    public String toString() {
+    String toString() {
         return nome + " - " + especialidade;
     }
 }
 
-public class AulaPrincipal {
+class AulaPrincipal {
     public static void main(String[] args) {
-        Turma turma = new Turma("POO - 2025");
+        Turma turma = new Turma("POO - 2026");
         Aluno aluno = new Aluno("A001", "João");
         Professor professor = new Professor("Mariana", "Java");
 
         turma.adicionarAluno(aluno);
         turma.adicionarProfessor(professor);
 
-        turma.getAlunos().forEach(System.out::println);
-        turma.getProfessores().forEach(System.out::println);
+        //turma.getAlunos().forEach(System.out::println);
+        for (int i = 0; i < turma.getAlunos().size(); i++) {
+            Aluno a = turma.getAlunos().get(i);
+            System.out.println(a);
+        }
+        //turma.getProfessores().forEach(System.out::println);
+        for (Professor p : turma.getProfessores()) {
+            System.out.println(p);
+        }
     }
 }
 ```
@@ -204,7 +236,7 @@ O método `contains` usa `equals` para comparar objetos na lista. Por isso, quan
 
 ```java
 @Override
-public boolean equals(Object obj) {
+boolean equals(Object obj) {
     if (this == obj) return true;
     if (!(obj instanceof Aluno)) return false;
     Aluno outro = (Aluno) obj;
@@ -219,23 +251,23 @@ Sem isso, duas instâncias diferentes com mesmo conteúdo podem ser consideradas
 Outro domínio rico em listas é a biblioteca digital do exercício. Um livro pode ser classificado em várias categorias e pertence a um autor.
 
 ```java
-public class Livro {
-    private String titulo;
-    private Autor autor;
-    private List<Categoria> categorias = new ArrayList<>();
+class Livro {
+    String titulo;
+    Autor autor;
+    List<Categoria> categorias = new ArrayList<>();
 
-    public Livro(String titulo, Autor autor) {
+    Livro(String titulo, Autor autor) {
         this.titulo = titulo;
         this.autor = autor;
     }
 
-    public void adicionarCategoria(Categoria categoria) {
+    void adicionarCategoria(Categoria categoria) {
         if (!categorias.contains(categoria)) {
             categorias.add(categoria);
         }
     }
 
-    public List<Categoria> getCategorias() {
+    List<Categoria> getCategorias() {
         return categorias;
     }
 }
@@ -247,19 +279,6 @@ Aqui temos:
 - `Livro` associado a muitas `Categoria` através de `List<Categoria>`
 - `Categoria` e `Livro` formam um relacionamento de **muitos para muitos** quando cada categoria pode ter muitos livros e cada livro pode ter muitas categorias
 
-## 🔧 Uma prática mais segura ao exibir listas
-
-Uma lista é um detalhe de implementação. Quem usa sua classe não precisa saber se você usa `ArrayList`, `LinkedList` ou outro tipo.
-
-Prefira expor `List<T>` nos métodos públicos:
-
-```java
-public List<Aluno> getAlunos() {
-    return alunos;
-}
-```
-
-Isso mantém o foco na associação entre as classes, sem prender quem usa a classe à forma como a lista foi implementada.
 
 ## 🧭 Como percorrer associações com listas
 
@@ -267,7 +286,8 @@ Isso mantém o foco na associação entre as classes, sem prender quem usa a cla
 
 ```java
 for (int i = 0; i < turma.getAlunos().size(); i++) {
-    System.out.println(turma.getAlunos().get(i));
+    Aluno aluno = turma.getAlunos().get(i);
+    System.out.println(aluno);
 }
 ```
 
@@ -296,14 +316,6 @@ As listas são o principal recurso para modelar relações reais em seus sistema
 
 Uma associação com lista deixa o seu modelo mais fiel ao mundo real e mais preparado para mudanças.
 
-## 🏗️ Exercícios práticos
-
-- Modele um sistema de **Biblioteca Digital** com `Livro`, `Autor` e `Categoria`. Cada livro pode pertencer a várias categorias e cada autor pode ter vários livros.
-- Modele um sistema de **Gerenciamento de Escola** com `Escola`, `Turma`, `Aluno` e `Professor`. Uma turma deve poder listar vários alunos e vários professores.
-- Modele um sistema de **Loja de Roupas** com `Departamento`, `Produto`, `Cliente` e `Carrinho`. Um cliente pode ter vários carrinhos e cada carrinho pode conter vários produtos.
-- Modele um sistema de **Reserva de Hotel** com `Hotel`, `Quarto`, `Reserva` e `Cliente`. Cada hotel tem vários quartos, e cada reserva pode afetar a disponibilidade de vários quartos.
-- Modele um sistema de **Projeto de Software** com `Projeto`, `Tarefa` e `Funcionario`. Um projeto tem várias tarefas, e cada tarefa pode ser atribuída a vários funcionários.
-
 ## Resumo
 
 - `List` serve para representar associações 1:N e N:N
@@ -313,3 +325,10 @@ Uma associação com lista deixa o seu modelo mais fiel ao mundo real e mais pre
 - Use laços e `forEach` para percorrer as relações associadas
 
 > **A chave é entender que a lista não é um atributo qualquer: ela é a associação viva entre duas classes.**
+
+
+
+## 🔨 O Desafio
+
+ - [Desafio 05 - UML e classes](../desafios/05_listas_associacoes.md)
+

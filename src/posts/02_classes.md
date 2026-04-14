@@ -126,7 +126,7 @@ Cada criatura (🐾 Objeto) que nasce a partir de um molde é **única**. Duas c
 
 ```plantuml
 @startuml
-skinparam backgroundColor transparent
+
 skinparam defaultFontSize 13
 
 left to right direction
@@ -347,7 +347,7 @@ public class Criatura {
 ```plantuml
 @startuml
 skinparam style strictuml
-skinparam backgroundColor transparent
+
 autoactivate on
 
 participant Universo
@@ -541,7 +541,7 @@ Criatura misterio = new Criatura("???");  // Ritual simplificado
 
 ```plantuml
 @startuml
-skinparam backgroundColor transparent
+
 skinparam defaultFontSize 14
 skinparam classBackgroundColor #98FB98
 skinparam classBorderColor SeaGreen

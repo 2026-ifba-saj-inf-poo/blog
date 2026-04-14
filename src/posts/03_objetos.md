@@ -153,7 +153,7 @@ Aqui, `c1` e `c2` apontam para criaturas **diferentes**. Cada uma tem seu própr
 
 ```plantuml
 @startuml
-skinparam backgroundColor transparent
+
 skinparam defaultFontSize 13
 
 rectangle "Memória" {
@@ -197,7 +197,7 @@ public class Universo {
 
 ```plantuml
 @startuml
-skinparam backgroundColor transparent
+
 skinparam defaultFontSize 13
 
 rectangle "Memória" {
@@ -281,7 +281,7 @@ Observe o método `transferir`: ele recebe **outra conta** como parâmetro. Quan
 ```plantuml
 @startuml
 skinparam style strictuml
-skinparam backgroundColor transparent
+
 autoactivate on
 
 participant Universo
@@ -353,7 +353,7 @@ Mesmo com atributos idênticos, `c1 == c2` retorna `false`. Por quê? Porque `==
 
 ```plantuml
 @startuml
-skinparam backgroundColor transparent
+
 skinparam defaultFontSize 13
 
 rectangle "Memória" {
