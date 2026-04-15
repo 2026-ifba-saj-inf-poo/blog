@@ -49,7 +49,10 @@ List<Categoria> categorias = new ArrayList<>();
 
 Esta é a forma mais comum de tornar uma associação **dinâmica** e **flexível**.
 
-<figure>
+- Modele um sistema de **Gerenciamento de Escola** com `Turma`, `Aluno` e `Professor`. Uma turma deve poder listar vários alunos e vários professores.
+
+
+::: figure UML de associações com listas para Turma/Aluno/Professor
 
 ```plantuml
 @startuml
@@ -57,17 +60,42 @@ class Turma {
   - String nome
   - List<Aluno> alunos
   - List<Professor> professores
+  Turma(String nome)
+  + adicionarAluno(Aluno aluno)
+  + adicionarProfessor(Professor professor)
 }
 class Aluno {
   - String nome
-  - List<Turma> turmas
   - String matricula
+  - List<Turma> turmas
+  Aluno(String nome, String Matricula)
+  + adicionarTurma(Turma turma)
 }
 class Professor {
   - String nome
   - List<Turma> turmas
-  - String especialidade
+  Professor(String nome)
+  + adicionarTurma(Turma turma)
 }
+
+Turma --> "0..*" Aluno : alunos
+Aluno --> "0..*" Turma : turmas
+Turma --> "0..*" Professor : professores
+Professor --> "0..*" Turma : turmas
+@enduml
+
+```
+
+:::
+
+- Modele um sistema de **Biblioteca Digital** com `Livro`, `Autor` e `Categoria`. Cada livro pode pertencer a várias categorias e cada autor pode ter vários livros.
+
+
+::: figure UML de associações com listas para Livro/Autor/Categoria.
+
+```plantuml
+@startuml
+
 class Livro {
   - String titulo
   - Autor autor
@@ -87,10 +115,6 @@ class Categoria {
     Categoria(String nome)
   + adicionarLivro(Livro livro)
 }
-Turma --> "0..*" Aluno : alunos
-Aluno --> "0..*" Turma : turmas
-Turma --> "0..*" Professor : professores
-Professor --> "0..*" Turma : turmas
 Livro --> Autor : autor
 Autor --> "0..*" Livro : livros
 Livro --> "0..*" Categoria : categorias
@@ -98,8 +122,7 @@ Categoria --> "0..*" Livro : livros
 @enduml
 ```
 
-<figcaption>UML de associações com listas para Turma/Aluno/Professor e Livro/Categoria.</figcaption>
-</figure>
+:::
 
 ## 🌌 Por que usar `ArrayList` nas associações?
 
