@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.27",
+    "@vuepress/plugin-pwa": "2.0.0-rc.128",
     "@vuepress/plugin-search": "2.0.0-rc.128",
     "sass-embedded": "^1.98.0",
     "vue": "^3.5.31",
@@ -24,7 +25,6 @@
     ]
   },
   "dependencies": {
-    "@vuepress/plugin-pwa": "^1.9.10",
     "markdown-it-container": "^4.0.0",
     "markdown-it-plantuml": "^1.4.1",
     "markdown-it-table-captions": "^1.0.4"
