@@ -8,7 +8,7 @@ export default defineUserConfig({
   base: "/blog/",
 
   lang: "pt-BR",
-  title: "20261 Info POO",
+  title: "2026 Info POO",
   description: "Material das Aulas",
 
   extendsMarkdown: (md) => {
