@@ -86,6 +86,25 @@ Um método pode:
 - **Não retornar nada** (`void`) — executa uma ação sem devolver informação
 - **Retornar um valor** — executa uma ação e devolve uma resposta
 
+```java
+class Conta {
+    int numero;       // atributo
+    String cliente;   // atributo
+    double saldo;     // atributo
+    double limite;    // atributo
+
+    void sacar(double valor) { // método sem retorno
+        if (valor <= saldo + limite) {
+            saldo -= valor;
+        }
+    }
+
+    double consultarSaldo() { // método com retorno
+        return saldo;
+    }
+}
+```
+
 ### Construtor
 
 O **construtor** é um método especial que é executado **automaticamente** no momento em que um objeto é criado. Ele serve para:
@@ -101,6 +120,32 @@ Regras do construtor:
 3. É chamado automaticamente pelo operador `new`
 4. Se você não criar nenhum, Java fornece um **construtor padrão** (sem parâmetros)
 5. Uma classe pode ter **vários construtores** com parâmetros diferentes
+
+```java
+class Conta {
+    int numero;       // atributo
+    String cliente;   // atributo
+    double saldo;     // atributo
+    double limite;    // atributo
+    // Construtor
+    Conta(int numero, String cliente, double saldo, double limite) {
+        this.numero = numero;
+        this.cliente = cliente;
+        this.saldo = saldo;
+        this.limite = limite;
+    }
+    void sacar(double valor) { // método sem retorno
+        if (valor <= saldo + limite) {
+            saldo -= valor;
+        }
+    }
+
+    double consultarSaldo() { // método com retorno
+        return saldo;
+    }
+
+}
+```
 
 ## 🌌 A Gênese
 
