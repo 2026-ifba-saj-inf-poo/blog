@@ -1,9 +1,15 @@
 {
   "name": "blog-material-aula",
-  "description": "Materia de Aula de POO do semestre 2026.1",
+  "description": "Materia de Aula de POO para o ano de 2026",
   "version": "1.0.0",
   "license": "MIT",
   "type": "module",
+  "pnpm": {
+    "allowBuilds": {
+      "@parcel/watcher": true,
+      "esbuild": true
+    }
+  },
   "scripts": {
     "docs:build": "vuepress-vite build src",
     "docs:clean-dev": "vuepress-vite dev src --clean-cache",
