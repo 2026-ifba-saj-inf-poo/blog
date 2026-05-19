@@ -1,6 +1,6 @@
 ---
-title: Desafio 06 - O Tesouro do Dragão Ancestral
-date: 2026-05-19 8:30:00.00 -3
+title: O Tesouro do Dragão Ancestral
+date: 2026-05-19 15:30:00.00 -3
 category:
   - exercicio
   - entrega
