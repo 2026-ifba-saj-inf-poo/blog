@@ -24,5 +24,6 @@ adaptado de [^Takenami]
     - Só é possível dar stop se o Aparelho de DVD estiver em play;
     - Ao dar play deve aparecer o nome e a duração do filme que está sendo exibido.
 
+[Entrega](https://classroom.github.com/a/y7WFVB98)
 
 <!-- @include: ../../includes/bib.md -->
