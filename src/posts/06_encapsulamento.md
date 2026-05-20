@@ -1,5 +1,5 @@
 ---
-icon: edit
+icon: book
 date: 2026-05-19 13:30:00.00 -3
 title: "Encapsulamento"
 tag:

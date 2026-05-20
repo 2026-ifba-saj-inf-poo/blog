@@ -1,5 +1,5 @@
 ---
-icon: edit
+icon: book
 date: 2026-04-14 13:00:00.00 -3
 title: "Listas nas Associações: Modelando 1:N e N:N"
 tag:

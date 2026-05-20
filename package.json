@@ -8,7 +8,10 @@
     "allowBuilds": {
       "@parcel/watcher": true,
       "esbuild": true
-    }
+    },
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   },
   "scripts": {
     "docs:build": "vuepress-vite build src",
@@ -24,11 +27,6 @@
     "vue": "^3.5.31",
     "vuepress": "2.0.0-rc.27",
     "vuepress-theme-hope": "2.0.0-rc.104"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ]
   },
   "dependencies": {
     "markdown-it-container": "^4.0.0",
