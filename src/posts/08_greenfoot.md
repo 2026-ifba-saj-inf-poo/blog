@@ -422,7 +422,7 @@ Depois de criar sua classe `Lobster`, você pode preenchê-la fazendo-o se mover
 
 Você pode testar se o **cavalo marinho** está funcionando colocando um à esquerda de um caranguejo, clicando em "Executar" e deixando que ambos corram para o lado direito do mundo, onde o caranguejo será comido. (Se quiser, faça seu próprio som para quando o **cavalo marinho** comer o caranguejo.) Isso é ótimo, mas nosso **cavalo marinho** é bem burro; é fácil escapar dele movendo-se para o lado, e quando ele chega ao canto direito do mundo, ele fica lá para sempre (assim como nosso caranguejo original).
 
-Vamos tornar nosso **cavalo marinho** mais difícil de evitar introduzindo um pouco de aleatoriedade. O Greenfoot fornece uma função Greenfoot.getRandomNumber que fornecerá um número aleatório. Aqui está uma primeira tentativa, onde giramos uma quantidade aleatória a cada quadro:
+Vamos tornar nosso **cavalo marinho** mais difícil de evitar introduzindo um pouco de aleatoriedade. O Greenfoot fornece uma função `Greenfoot.getRandomNumber` que fornecerá um número aleatório. Aqui está uma primeira tentativa, onde giramos uma quantidade aleatória a cada quadro:
 
 ```java
 public void moveAndTurn(){
@@ -435,7 +435,7 @@ Esse código significa que giraremos uma quantidade aleatória a cada quadro, en
 
 No momento, nossa lagosta gira a cada quadro, o que a faz girar em vez de vagar. Há algumas maneiras diferentes de fazê-la girar com menos frequência. Uma seria ter uma variável de contador que registrasse quanto tempo se passou desde a última vez que giramos, e girasse, digamos, a cada 10 quadros. Outra maneira é usar o gerador de números aleatórios para girar aleatoriamente, com uma determinada média (por exemplo, a cada 10 quadros). Usaremos outro uso do gerador aleatório, pois ele torna a lagosta menos previsível.
 
-Digamos que uma lagosta tenha 10% de chance de virar a cada quadro. Podemos codificar isso comparando Greenfoot.getRandomNumber(100) a uma determinada porcentagem:
+Digamos que uma lagosta tenha 10% de chance de virar a cada quadro. Podemos codificar isso comparando `Greenfoot.getRandomNumber(100)` a uma determinada porcentagem:
 
 ```java
 public void moveAndTurn(){
@@ -446,11 +446,11 @@ public void moveAndTurn(){
 }
 ```
 
-Se você estiver interessado, pense cuidadosamente sobre como isso funciona — por que usamos < em vez de <=? Poderíamos ter codificado de forma diferente, por exemplo, usando Greenfoot.getRandomNumber(50) ou Greenfoot.getRandomNumber(10)? E quanto a Greenfoot.getRandomNumber(5)?
+Se você estiver interessado, pense cuidadosamente sobre como isso funciona — por que usamos` < `em vez de` <= `?  Poderíamos ter codificado de forma diferente, por exemplo, usando `Greenfoot.getRandomNumber(50)` ou `Greenfoot.getRandomNumber(10)`? E quanto a `Greenfoot.getRandomNumber(5)`?
 
 Isso fará com que nossa lagosta vire (em média) a cada 10 quadros. Compile e execute, e veja o que acontece. A lagosta deve andar principalmente em linha reta, ocasionalmente virando à direita em uma distância variável. Isso é ótimo, e nos leva de volta ao nosso outro problema: a lagosta sempre vira à direita.
 
-Sabemos, pelo nosso caranguejo, que a maneira de virar à esquerda é usar um número negativo para o ângulo. Se pudéssemos mudar a rotação da nossa lagosta de 0 a +90 para -45 a +45, isso resolveria o nosso problema. Existem algumas maneiras diferentes de fazer isso, mas aqui está a mais simples: observe que, se subtrairmos 45 do nosso número, obtemos um número na faixa correta. Então, vamos ajustar nosso código de acordo:
+Sabemos, pelo nosso caranguejo, que a maneira de virar à esquerda é usar um número negativo para o ângulo. Se pudéssemos mudar a rotação da nossa lagosta de `0` a `+90` para `-45` a `+45`, isso resolveria o nosso problema. Existem algumas maneiras diferentes de fazer isso, mas aqui está a mais simples: observe que, se subtrairmos 45 do nosso número, obtemos um número na faixa correta. Então, vamos ajustar nosso código de acordo:
 
 
 ```java
@@ -486,8 +486,3 @@ public void moveAndTurn(){
 
 
 
-## Entrega
-
-[Link 2A](https://classroom.github.com/a/Zk1nSKQl)
- 
-[Link 2B](https://classroom.github.com/a/2cbb8wuE)
