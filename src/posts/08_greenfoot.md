@@ -21,7 +21,7 @@ Se você não vir o mundo e as classes à direita estiverem com barras diagonais
 
 A grande área da grade que cobre a maior parte da janela é chamada de _mundo_. Como temos um cenário aqui relacionado a wombates, vemos um mundo de wombates. À direita da janela está a classe display. Aqui você pode ver todas as classes Java envolvidas no projeto. As classes _World_ e _Ator_ estarão sempre lá — elas vêm com o sistema _Greenfoot_. As outras classes pertencem ao cenário de wombates e serão diferentes se você usar cenários diferentes.
 
-Abaixo do mundo estão os Controles de Execução (a área com os botões _Act_, _Run_, _Reset_ e _Speed_ o controle deslizante).
+Abaixo do mundo estão os Controles de Execução (a área com os botões <kbd>Act</kbd>, <kbd>Run</kbd>, _Reset_ e _Speed_ o controle deslizante).
 
 ![Annotated-interface](./img/Annotated-interface.png)
 
@@ -40,15 +40,15 @@ Existe um atalho para posicionar vários objetos um pouco mais rápido: <kbd>Shi
 
 ### Faça os objetos agirem
 
-Clique no botão _Act_ nos controles de execução. Cada objeto agora age — ou seja: cada objeto faz o que foi programado para fazer. No nosso exemplo, as folhas são programadas para não fazer nada, enquanto os Wombates são programados para se moverem para frente. Tente colocar dois wombates no mundo e pressione _Act_ novamente. Ambos se moverão.
+Clique no botão <kbd>Act</kbd> nos controles de execução. Cada objeto agora age — ou seja: cada objeto faz o que foi programado para fazer. No nosso exemplo, as folhas são programadas para não fazer nada, enquanto os Wombates são programados para se moverem para frente. Tente colocar dois wombates no mundo e pressione <kbd>Act</kbd> novamente. Ambos se moverão.
 
-Os wombates também gostam de comer folhas. Se encontrarem uma folha no caminho, eles a comerão. Tente colocar algumas folhas na frente dos wombates e clique em _Act_ — os wombates se moverão para frente e comerão as folhas.
+Os wombates também gostam de comer folhas. Se encontrarem uma folha no caminho, eles a comerão. Tente colocar algumas folhas na frente dos wombates e clique em <kbd>Act</kbd> — os wombates se moverão para frente e comerão as folhas.
 
 ### Execute um cenário
 
-Clique no botão _Run_. Isso equivale a clicar no botão _Act_ repetidamente, muito rapidamente. Você notará que o botão _Run_ muda para um botão _Pause_; clicar em _Pause_ interrompe toda a ação.
+Clique no botão <kbd>Run</kbd>. Isso equivale a clicar no botão <kbd>Act</kbd> repetidamente, muito rapidamente. Você notará que o botão <kbd>Run</kbd> muda para um botão <kbd>Pause</kbd>; clicar em <kbd>Pause</kbd> interrompe toda a ação.
 
-O controle deslizante ao lado dos botões _Act_ e _Run_ define a velocidade. Clique em _Run_ e altere o controle deslizante, e você verá a diferença.
+O controle deslizante ao lado dos botões <kbd>Act</kbd> e <kbd>Run</kbd> define a velocidade. Clique em <kbd>Run</kbd> e altere o controle deslizante, e você verá a diferença.
 
 ### Invocar métodos diretamente
 
@@ -189,7 +189,7 @@ Só podemos remover o `worm` quando houver um `worm`:
     }
 ```
 
-Então, vamos fazer um teste. Compile, crie algumas minhocas e coloque-as no seu mundo, depois adicione um caranguejo, aperte _Run_ e use as teclas esquerda e direita para guiar o caranguejo até as minhocas, que devem ser comidas.
+Então, vamos fazer um teste. Compile, crie algumas minhocas e coloque-as no seu mundo, depois adicione um caranguejo, aperte <kbd>Run</kbd> e use as teclas esquerda e direita para guiar o caranguejo até as minhocas, que devem ser comidas.
 
 ```java
 public void act(){
@@ -256,7 +256,7 @@ Como inicializar o mundo com atores, bem como reproduzir e gravar sons.
 
 ### Salvando o mundo
 
-A esta altura, você provavelmente já está cansado de ter que adicionar novos objetos ao mundo toda vez que compilamos o código. É possível adicionar código para criar automaticamente algumas minhocas e um caranguejo para você — e, além disso, é possível fazer com que o Greenfoot escreva esse código para você! Clique em _Reset_ e adicione algumas minhocas e um caranguejo ao mundo. Antes de clicar em _Run_ , clique com o botão direito do mouse no mundo e selecione a opção "Save the World":
+A esta altura, você provavelmente já está cansado de ter que adicionar novos objetos ao mundo toda vez que compilamos o código. É possível adicionar código para criar automaticamente algumas minhocas e um caranguejo para você — e, além disso, é possível fazer com que o Greenfoot escreva esse código para você! Clique em _Reset_ e adicione algumas minhocas e um caranguejo ao mundo. Antes de clicar em <kbd>Run</kbd> , clique com o botão direito do mouse no mundo e selecione a opção "Save the World":
 
 ![Pop-up mundial crabworld salve o mundo](./img/world-popup-CrabWorld-save-the-world.png)
 
