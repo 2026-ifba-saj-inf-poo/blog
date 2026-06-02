@@ -56,7 +56,7 @@ Em vez de simplesmente executar o cenário inteiro, você também pode invocar m
 
 Certifique-se de que haja um wombate no mundo e que o cenário não esteja em execução. Em seguida, clique com o botão direito do mouse no wombate (aquele no mundo, não na classe `Wombat`) e você verá que os objetos no mundo também têm um menu pop-up:
 
-![Ator-pop-up-wombat-plain](img/Ator-pop-up-wombat-plain.png)
+![Ator-pop-up-wombat-plain](./img/Ator-pop-up-wombat-plain.png)
 
 Você pode selecionar qualquer um dos métodos mostrados aqui para pedir ao vombate que faça algo. Experimente, por exemplo, turnLeft(). Selecionar isso no menu diz ao vombate para virar para a esquerda. Experimente também move().
 
