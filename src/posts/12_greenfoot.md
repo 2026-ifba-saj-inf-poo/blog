@@ -12,7 +12,7 @@ order: 13
 
 ## Interagindo com o Greenfoot
 
-Este tutorial usa um cenário chamado "wombats", que você pode [baixar aqui](./files/wombats.gfar) (também está incluído nos cenários de exemplo com versões do Greenfoot anteriores à 2.4.0). Abra o cenário "wombats" no Greenfoot; você deverá ver isto:
+Este tutorial usa um cenário chamado "wombats", que você pode [baixar aqui](../files/wombats.gfar) (também está incluído nos cenários de exemplo com versões do Greenfoot anteriores à 2.4.0). Abra o cenário "wombats" no Greenfoot; você deverá ver isto:
 
 ![Cenário Principal Greenfoot](./img/Cenario-principal.png)
 
@@ -86,7 +86,7 @@ Vamos fazer movimento no Greenfoot e como controlar atores com o teclado.
 
 ### O Cenário dos Caranguejos
 
-Baixe o [arquivo zip](./files/modern-crab.zip) do cenário inicial do Crab e descompacte o conteúdo em algum lugar do seu disco rígido. Em seguida, abra o cenário nesse local no Greenfoot; você deverá ver a interface padrão do Greenfoot, com um mundo arenoso vazio:
+Baixe o [arquivo zip](../files/modern-crab.zip) do cenário inicial do Crab e descompacte o conteúdo em algum lugar do seu disco rígido. Em seguida, abra o cenário nesse local no Greenfoot; você deverá ver a interface padrão do Greenfoot, com um mundo arenoso vazio:
 
 ![Cenário principal dos Caranguejos](./img/principal-dos-Caranguejos.png)
 
