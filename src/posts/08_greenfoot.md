@@ -486,10 +486,11 @@ public void moveAndTurn(){
 
 ## Exercício
 
-- Acesse [https://kenney.nl/assets/tower-defense-top-down](https://kenney.nl/assets/tower-defense-top-down) e escolha um conjunto de imagens. 
+- Acesse [kenney.nl](https://kenney.nl/assets?search=top+ddown) e escolha um conjunto de imagens. 
 - Crie um projeto no Greenfoot com um Mundo e dois Atores.
 - Um dos atores devem remover o outro ator
 - Entregue no link abaixo
 
 
-[Entrga](https://classroom.github.com/a/9oaUP6TT)
+[Entrga](http://10.26.103.66:3000/2026-info-poo-2c/greenfoot-01/fork)
+
